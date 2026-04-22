@@ -25,9 +25,7 @@ CSS Modularizado: Em vez de um arquivo gigante e difícil de ler, o estilo foi q
 Active State Dinâmico: O JavaScript lê a URL atual do navegador e pinta a linha amarela embaixo do link correto no menu, sem precisar fazer isso na mão em cada arquivo.
 
 📂 Estrutura de Arquivos (Directory Tree)
-Plaintext
 /riviera-pescados
-│
 ├── index.html           # Página inicial (Hero, Destaques)
 ├── produtos.html        # Catálogo de produtos com grid cortado e filtros
 ├── receitas.html        # Grid de receitas com cards flutuantes
@@ -35,7 +33,7 @@ Plaintext
 ├── contato.html         # Grid focado com SAC em largura total (CSS Grid)
 ├── blog.html            # Artigos com imagens padronizadas em proporção 4:3
 │
-├── /components/         # Fragmentos de HTML
+├── /components/         # Fragmentos de HTML (Injeção via JS)
 │   ├── header.html      # Menu de navegação e Logo
 │   └── footer.html      # Newsletter e Rodapé em 4 colunas
 │
@@ -45,17 +43,18 @@ Plaintext
 │   │
 │   ├── /css/
 │   │   ├── style.css        # Maestro (Importa os outros CSS)
-│   │   ├── variables.css    # Cores (Root), Fontes globais e Scroll suave
-│   │   ├── components.css   # Estilos do Header, Footer, Newsletter e Botões
-│   │   ├── home.css         # Estilos exclusivos do index.html
-│   │   ├── produtos.css     # Estilos exclusivos do catálogo
-│   │   ├── receitas.css     # Estilos exclusivos das receitas
-│   │   ├── quem-somos.css   # Estilos exclusivos da página sobre
-│   │   ├── contato.css      # Estilos exclusivos de contato
-│   │   └── blog.css         # Estilos exclusivos do blog
+│   │   ├── variables.css    # Cores (Root), Fontes e Scroll suave
+│   │   ├── components.css   # Estilos de Header, Footer e Botões
+│   │   ├── home.css         # Estilos exclusivos da Home
+│   │   ├── produtos.css     # Estilos exclusivos do Catálogo
+│   │   ├── receitas.css     # Estilos exclusivos das Receitas
+│   │   ├── quem-somos.css   # Estilos exclusivos da Bio
+│   │   ├── contato.css      # Estilos exclusivos de Contato
+│   │   └── blog.css         # Estilos exclusivos do Blog
 │   │
-│   ├── /images/         # Todos os banners, fotos, ícones e logo
-│   └── /fonts/          # (Opcional) Fontes customizadas baixadas
+│   ├── /images/         # Banners, fotos, ícones e logo
+│   └── /fonts/          # (Opcional) Fontes customizadas
+
 ✨ Principais Funcionalidades Visuais (UI/UX)
 Logo "Vazada" (Overlapping): A logomarca da Riviera quebra o limite do cabeçalho e flutua por cima dos banners usando margin-bottom negativo e z-index, criando profundidade com drop-shadow.
 
