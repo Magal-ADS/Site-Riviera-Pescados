@@ -1,0 +1,190 @@
+/* --- HERO BANNER (PRODUTOS) --- */
+.hero-produtos {
+    height: 45vh; 
+    min-height: 350px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Garante que o conteúdo vá para a esquerda */
+    border-bottom: 6px solid var(--amarelo);
+}
+
+.hero-produtos-content {
+    width: 100%; /* Força o container a esticar, alinhando a caixa amarela na reta da logo */
+}
+
+.yellow-box {
+    background-color: var(--amarelo);
+    padding: 30px 60px;
+    display: inline-block;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.1); 
+    animation: slideIn 0.8s ease-out; 
+    text-align: left; /* Alinha o texto NOSSOS PRODUTOS à esquerda igual no Figma */
+}
+
+.yellow-box h1 {
+    color: var(--texto-dark);
+    font-size: 4.5rem;
+    font-weight: 900;
+    line-height: 0.9;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* --- FILTROS --- */
+.filters-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.filter-label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #666;
+}
+
+.filter-selects {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-selects select {
+    padding: 12px 40px 12px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    color: #555;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    appearance: none; /* Tira a seta padrão do sistema */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23666" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
+    transition: background-color 0.3s;
+}
+
+.filter-selects select:hover {
+    background-color: #e4e4e4;
+}
+
+/* --- CATÁLOGO DE PRODUTOS --- */
+.catalog-section {
+    padding-bottom: 80px;
+    /* Imagem de fundo (frutos do mar/gelo) para toda a área de produtos */
+    background-image: url('../images/bg-catalog.jpg'); 
+    background-repeat: repeat; 
+    background-size: cover;
+    background-position: center;
+}
+
+.catalog-row {
+    position: relative; /* Necessário para ancorar a faixa azul */
+    padding-top: 40px;
+    margin-bottom: 20px;
+}
+
+/* A faixa azul que fica atrás dos cards e na frente do fundo texturizado */
+.catalog-row::before {
+    content: '';
+    position: absolute;
+    top: 25%; /* Posição de início da faixa azul */
+    bottom: 25%; /* Posição de fim da faixa azul */
+    left: 0;
+    right: 0;
+    background-color: var(--azul-claro);
+    z-index: 1; /* Fica acima do fundo, mas abaixo dos produtos */
+}
+
+/* Garante que o grid de produtos fique por cima da faixa azul */
+.catalog-row .products-grid {
+    background: transparent;
+    padding: 0 20px;
+    position: relative; /* Fundamental para o z-index funcionar */
+    z-index: 2; /* Fica acima da faixa azul */
+}
+
+/* Garante que os cards permaneçam com fundo branco */
+.catalog-row .product-card {
+    background: var(--branco);
+}
+
+/* --- PAGINAÇÃO --- */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    position: relative; /* Coloca a paginação à frente do fundo */
+    z-index: 2;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.page-num {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: var(--branco); /* Fundo branco para não sumir no peixe */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.page-num:hover, .page-num.active {
+    background-color: var(--texto-dark);
+    color: var(--branco);
+}
+
+.page-arrow {
+    background-color: var(--branco);
+    padding: 8px 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.page-arrow:hover {
+    color: var(--texto-dark);
+    background-color: #f0f0f0;
+}
+
+.page-dots {
+    color: #333;
+    font-weight: bold;
+    background-color: var(--branco);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* --- RESPONSIVO PRODUTOS --- */
+@media (max-width: 768px) {
+    .yellow-box { padding: 20px 30px; }
+    .yellow-box h1 { font-size: 2.5rem; }
+    .filters-section { flex-direction: column; align-items: flex-start; }
+    .filter-selects { width: 100%; }
+    .filter-selects select { flex: 1; }
+    /* Ajusta a espessura da faixa azul no celular para abraçar melhor os cards empilhados */
+    .catalog-row::before { top: 15%; bottom: 15%; }
+}

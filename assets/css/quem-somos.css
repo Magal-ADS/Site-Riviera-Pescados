@@ -1,0 +1,117 @@
+/* --- HERO BANNER (QUEM SOMOS) --- */
+.hero-historia {
+    height: 45vh;
+    min-height: 350px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 6px solid var(--amarelo);
+}
+
+.hero-historia-content { width: 100%; }
+
+/* --- CONTEÚDO PRINCIPAL --- */
+.about-container {
+    padding: 80px 20px;
+}
+
+.about-intro { margin-bottom: 60px; }
+.about-intro h2, .location-col h2, .quality-col h2 {
+    color: var(--texto-dark);
+    font-size: 2.8rem;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+.about-intro p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* --- GRID ONDE ESTAMOS / QUALIDADE --- */
+.location-quality-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.location-col img {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.quality-col p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.quality-col img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.carousel-dots .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.carousel-dots .dot.active { background-color: var(--texto-dark); }
+
+/* --- GRID MISSÃO, VISÃO E VALORES --- */
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.mvv-card {
+    background-color: var(--amarelo);
+    padding: 50px 30px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mvv-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.mvv-card h3 {
+    color: var(--texto-dark);
+    font-size: 2.2rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.mvv-card p {
+    color: var(--texto-dark);
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+/* --- RESPONSIVO QUEM SOMOS --- */
+@media (max-width: 768px) {
+    .location-quality-grid { grid-template-columns: 1fr; gap: 40px; }
+    .mvv-grid { grid-template-columns: 1fr; }
+    .about-intro h2, .location-col h2, .quality-col h2 { font-size: 2.2rem; }
+}

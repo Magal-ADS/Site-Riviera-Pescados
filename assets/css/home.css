@@ -1,0 +1,51 @@
+/* --- HERO BANNER --- */
+.hero { height: 65vh; background-size: cover; background-position: center; border-bottom: 6px solid var(--amarelo); }
+
+/* --- RECEITAS --- */
+.recipes { display: flex; align-items: center; padding: 100px 20px; gap: 60px; }
+.recipe-content { flex: 1; }
+.yellow-bar { width: 60px; height: 6px; background: var(--amarelo); margin-bottom: 20px; }
+.recipe-content h2 { color: var(--texto-dark); font-size: 3.5rem; font-weight: 900; line-height: 0.9; margin-bottom: 25px; }
+.recipe-content p { color: #555; font-size: 1.1rem; margin-bottom: 30px; max-width: 400px; }
+.recipe-image-wrapper { flex: 1; position: relative; }
+
+@keyframes floatAnimation {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+.img-curved { width: 100%; max-width: 500px; border-radius: 60% 60% 0 60%; position: relative; z-index: 2; animation: floatAnimation 6s ease-in-out infinite; }
+.blue-offset { position: absolute; width: 100%; height: 100%; background: var(--azul-claro); border-radius: 60% 60% 0 60%; top: 20px; left: 20px; z-index: 1; opacity: 0.3; }
+
+/* --- PRODUTOS --- */
+.products-area { margin-top: 100px; }
+.products-header { position: relative; height: 50px; background: var(--azul-claro); }
+.yellow-label { background: var(--amarelo); display: inline-block; padding: 15px 50px; position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
+.yellow-label:hover { transform: translate(-50%, -55%); }
+.yellow-label h3 { color: var(--texto-dark); font-weight: 900; margin: 0; }
+.products-grid { background: var(--azul-claro); display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; padding: 50px 20px 80px 20px; }
+
+.product-card { background: var(--branco); padding: 30px; border-radius: 15px; text-align: center; width: 300px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease; }
+.product-card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+.product-card img { width: 100%; margin-bottom: 20px; transition: transform 0.4s ease; }
+.product-card:hover img { transform: scale(1.08) rotate(2deg); }
+.product-card h4 { color: var(--texto-dark); font-size: 1.2rem; }
+
+/* --- REDES SOCIAIS --- */
+.social-media { padding: 80px 20px; text-align: center; }
+.social-media h2 { color: var(--texto-dark); font-weight: 900; font-size: 2.5rem; margin-bottom: 50px; }
+.social-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; }
+.social-item { width: 350px; height: 350px; background: #eee; border-radius: 10px; overflow: hidden; position: relative; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: box-shadow 0.3s ease; }
+.social-item:hover { box-shadow: 0 15px 30px rgba(0,0,0,0.2); }
+.social-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.social-item:hover img { transform: scale(1.15); }
+
+/* --- RESPONSIVO HOME --- */
+@media (max-width: 768px) {
+    .recipes { flex-direction: column; text-align: center; }
+    .recipe-content h2 { font-size: 2.5rem; }
+    .yellow-bar { margin: 0 auto 20px; }
+    .blue-offset { display: none; }
+    .img-curved { animation: none; }
+}

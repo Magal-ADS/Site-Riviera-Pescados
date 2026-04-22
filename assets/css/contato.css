@@ -1,0 +1,112 @@
+/* --- HERO BANNER (CONTACTO) --- */
+.hero-contato {
+    /* Reduzi a altura para evitar o corte exagerado da foto */
+    height: 35vh; 
+    min-height: 280px; 
+    
+    background-size: cover;
+    /* Mudei de 'center' para 'top center' para focar mais no rosto caso a imagem seja vertical */
+    background-position: center 20%; 
+    background-repeat: no-repeat;
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 6px solid var(--amarelo);
+}
+
+.hero-contato-content {
+    width: 100%;
+}
+
+/* Aproveita o estilo global da .yellow-box, mas ajusta o padding específico para esta página */
+.hero-contato .yellow-box {
+    padding: 20px 40px; /* Mais fino que nas outras páginas */
+}
+
+.hero-contato .yellow-box h1 {
+    font-size: 3.5rem; /* Letra ligeiramente menor para caber melhor na caixa */
+}
+
+/* --- GRELHA DE CONTACTOS --- */
+.contato-container {
+    padding: 80px 20px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background-color: var(--amarelo);
+    padding: 60px 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    color: var(--texto-dark);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.contact-card i {
+    font-size: 3.5rem;
+    margin-bottom: 25px;
+    color: var(--texto-dark);
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover i {
+    transform: scale(1.1);
+}
+
+.contact-card h3 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+/* Cartão SAC (Larga total) */
+.sac-card {
+    grid-column: 1 / -1; /* Faz o cartão ocupar todas as colunas disponíveis */
+    flex-direction: row; /* Coloca o ícone e o texto lado a lado */
+    gap: 30px;
+    padding: 40px;
+}
+
+.sac-card i {
+    margin-bottom: 0;
+    font-size: 4rem;
+}
+
+.sac-card h3 {
+    font-size: 2.2rem;
+}
+
+/* --- RESPONSIVO CONTACTO --- */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr; /* Muda para 1 coluna no telemóvel */
+    }
+    .sac-card {
+        grid-column: 1; /* Reseta o span no telemóvel */
+        flex-direction: column; /* Volta a ficar um por cima do outro */
+        text-align: center;
+        padding: 60px 30px;
+    }
+    .sac-card i {
+        margin-bottom: 20px;
+    }
+}
