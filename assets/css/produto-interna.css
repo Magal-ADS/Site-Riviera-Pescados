@@ -1,0 +1,168 @@
+/* --- BREADCRUMBS --- */
+.breadcrumb-section {
+    background-color: var(--azul-claro);
+    /* Aumentamos o padding-top para 55px. Isso empurra o texto para baixo, fugindo da logo vazada */
+    padding: 55px 0 15px 0; 
+    position: relative;
+    z-index: 1;
+}
+
+.breadcrumb-section p {
+    color: var(--texto-dark);
+    font-size: 0.9rem;
+    margin-left: 0; /* Devolve o texto para a extrema esquerda do container */
+}
+
+/* --- ALINHAMENTO DO BREADCRUMB E BOTÃO VOLTAR --- */
+.breadcrumb-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Garante que não quebre feio no celular */
+}
+
+.btn-voltar {
+    color: var(--texto-dark);
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 6px 14px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-voltar i {
+    transition: transform 0.3s ease;
+}
+
+.btn-voltar:hover {
+    background-color: var(--branco);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.btn-voltar:hover i {
+    transform: translateX(-4px); /* Animação da seta indo para trás */
+}
+
+
+/* --- RESPONSIVO BREADCRUMB --- */
+@media (max-width: 768px) {
+    .breadcrumb-section {
+        padding: 40px 0 15px 0; /* Respiro adaptado para o mobile */
+    }
+    .breadcrumb-section p {
+        text-align: center; /* Mantém centralizado no celular para estética */
+    }
+}
+
+/* --- FAIXA AZUL E LAYOUT DO PRODUTO --- */
+.product-banner-wrapper {
+    /* Cria a faixa azul que vai até a metade da altura, o resto é branco */
+    background: linear-gradient(to bottom, var(--azul-claro) 0%, var(--azul-claro) 250px, var(--branco) 250px, var(--branco) 100%);
+    padding-top: 40px;
+}
+
+.product-details-container {
+    padding-bottom: 60px;
+}
+
+.product-main-info {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+    margin-bottom: 60px;
+}
+
+.product-image-box {
+    flex: 1;
+    background: var(--branco);
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-radius: 4px;
+    text-align: center;
+}
+
+.product-image-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-text-info {
+    flex: 1;
+    padding-top: 20px;
+}
+
+.product-text-info h1 {
+    font-size: 3.5rem;
+    color: var(--texto-dark);
+    line-height: 1.1;
+    margin-bottom: 5px;
+}
+
+.product-weight {
+    display: block;
+    font-size: 1.8rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.product-icons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background-color: var(--texto-dark);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--branco);
+    font-size: 1.8rem;
+}
+
+.product-description {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.5;
+    max-width: 80%;
+}
+
+/* --- ACCORDIONS --- */
+.product-accordions {
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+.custom-accordion {
+    background-color: #f4f0f6;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.custom-accordion summary {
+    padding: 20px 25px;
+    font-weight: 700;
+    color: var(--texto-dark);
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-accordion summary::-webkit-details-marker { display: none; }
+.accordion-content { padding: 0 25px 20px 25px; color: #555; }
+
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+    .product-main-info { flex-direction: column; gap: 30px; }
+    .product-text-info h1 { font-size: 2.5rem; }
+}

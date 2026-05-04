@@ -1,8 +1,11 @@
 @import url('variables.css');
 @import url('components.css');
+
+/* Se existirem imports específicos por página, adicione abaixo */
 @import url('home.css');
+@import url('quem-somos.css');
 @import url('produtos.css');
 @import url('receitas.css');
-@import url('quem-somos.css');
-@import url('contato.css');
 @import url('blog.css');
+@import url('contato.css');
+@import url('produto-interna.css');

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riviera Pescados | Detalhes do Produto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- PLACEHOLDER DO HEADER -->
+    <div id="header-placeholder"></div>
+
+    <!-- BREADCRUMBS -->
+    <div class="breadcrumb-section">
+        <div class="container breadcrumb-nav">
+            <a href="produtos.html" class="btn-voltar">
+                <i class="fa-solid fa-arrow-left"></i> Voltar
+            </a>
+            <p>Produtos > Filé de Tilápia > <strong>Filé de Tilápia 400g</strong></p>
+        </div>
+    </div>
+
+    <!-- WRAPPER COM FAIXA AZUL -->
+    <div class="product-banner-wrapper">
+        <main class="product-details-container container">
+            
+            <div class="product-main-info">
+                <!-- Imagem do Produto -->
+                <div class="product-image-box">
+                    <img src="assets/images/produto-pacote.jpg" alt="Filé de Tilápia 400g">
+                </div>
+
+                <!-- Textos e Ícones -->
+                <div class="product-text-info">
+                    <h1>Filé de<br>Tilápia</h1>
+                    <span class="product-weight">400g</span>
+                    
+                    <div class="product-icons">
+                        <div class="icon-circle"><i class="fa-solid fa-snowflake"></i></div>
+                        <div class="icon-circle"><i class="fa-solid fa-fish"></i></div>
+                        <div class="icon-circle"><i class="fa-solid fa-fire-burner"></i></div>
+                    </div>
+                    
+                    <p class="product-description">Tilápia é fonte de proteínas e possui baixo índice de gordura.</p>
+                </div>
+            </div>
+
+            <!-- ACCORDIONS (Ingredientes / Tabela) -->
+            <div class="product-accordions">
+                <details class="custom-accordion">
+                    <summary>Ingredientes <i class="fa-solid fa-circle-xmark"></i></summary>
+                    <div class="accordion-content">
+                        <p>Filé de tilápia sem pele e sem espinha. Não contém glúten.</p>
+                    </div>
+                </details>
+                
+                <details class="custom-accordion">
+                    <summary>Tabela Nutricional <i class="fa-solid fa-circle-xmark"></i></summary>
+                    <div class="accordion-content">
+                        <p>Porção de 100g: Valor Energético 90kcal, Proteínas 20g, Gorduras Totais 1g.</p>
+                    </div>
+                </details>
+            </div>
+        </main>
+    </div>
+
+    <!-- RECEITAS COM O PRODUTO -->
+    <section class="related-recipes-section">
+        <div class="container">
+            <h2 class="related-title">Receitas com o Produto</h2>
+            <div class="recipes-grid-container">
+                <!-- Reutilizando a classe recipe-card-item do receitas.css -->
+                <div class="recipe-card-item">
+                    <img src="assets/images/receita-prato.jpg" alt="Prato">
+                    <h4>Filé de Tilápia Empanado com<br>Molho Ranch</h4>
+                </div>
+                <div class="recipe-card-item">
+                    <img src="assets/images/receita-prato.jpg" alt="Prato">
+                    <h4>Filé de Tilápia Empanado com<br>Molho Ranch</h4>
+                </div>
+                <div class="recipe-card-item">
+                    <img src="assets/images/receita-prato.jpg" alt="Prato">
+                    <h4>Filé de Tilápia Empanado com<br>Molho Ranch</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLACEHOLDER DO FOOTER -->
+    <div id="footer-placeholder"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
