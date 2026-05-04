@@ -5,24 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riviera Pescados | Qualidade que aparece no corte</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/home.css">
 </head>
 <body>
     <div id="header-placeholder"></div>
 
-    <section class="hero" style="background-image: url('assets/images/banner.jpg');"></section>
+    <section class="hero-container">
+        <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide hero" style="background-image: url('assets/images/banner.jpg');"></div>
+                <div class="swiper-slide hero" style="background-image: url('assets/images/banner-produtos.jpg');"></div>
+                <div class="swiper-slide hero" style="background-image: url('assets/images/banner-blog.jpg');"></div>
+            </div>
+            <!-- Controles do Swiper -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
 
-    <section class="recipes container">
-        <div class="recipe-content">
-            <div class="yellow-bar"></div>
-            <h2>RECEITAS<br>ESPECIAIS</h2>
-            <p>Aproveite e descubra todo o sabor e qualidade que os produtos da Riviera podem te oferecer.</p>
-            <a href="#" class="btn-primary">Saiba Mais</a>
+    <section class="recipes-carousel-section container">
+        <div class="swiper recipes-swiper">
+            <div class="swiper-wrapper">
+                <!-- Receita 1 -->
+                <div class="swiper-slide">
+                    <div class="recipe-slide-item">
+                        <div class="recipe-content">
+                            <div class="yellow-bar"></div>
+                            <h2>RECEITAS<br>ESPECIAIS</h2>
+                            <p>Filé de Tilápia Empanado com Molho Ranch: O sabor irresistível da Riviera na sua mesa.</p>
+                            <a href="receitas.html" class="btn-primary">Saiba Mais</a>
+                        </div>
+                        <div class="recipe-image-wrapper">
+                            <div class="blue-offset"></div>
+                            <img src="assets/images/receita-prato.jpg" alt="Prato de Tilápia Riviera" class="img-curved">
+                        </div>
+                    </div>
+                </div>
+                <!-- Receita 2 -->
+                <div class="swiper-slide">
+                    <div class="recipe-slide-item">
+                        <div class="recipe-content">
+                            <div class="yellow-bar"></div>
+                            <h2>DELÍCIAS DA<br>RIVIERA</h2>
+                            <p>Descubra novas formas de preparar o melhor pescado com nossas receitas exclusivas.</p>
+                            <a href="receitas.html" class="btn-primary">Saiba Mais</a>
+                        </div>
+                        <div class="recipe-image-wrapper">
+                            <div class="blue-offset"></div>
+                            <img src="assets/images/receita.jpg" alt="Receita Riviera" class="img-curved">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="recipe-image-wrapper">
-            <div class="blue-offset"></div>
-            <img src="assets/images/receita-prato.jpg" alt="Prato de Tilápia Riviera" class="img-curved">
-        </div>
+        <!-- Controles movidos para fora do swiper para evitar overflow:hidden -->
+        <div class="swiper-button-prev recipes-prev"></div>
+        <div class="swiper-button-next recipes-next"></div>
     </section>
 
     <section class="products-area">
@@ -47,6 +88,7 @@
     </section>
 
     <div id="footer-placeholder"></div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

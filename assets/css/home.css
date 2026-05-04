@@ -1,13 +1,34 @@
 /* --- HERO BANNER --- */
+.hero-container { position: relative; width: 100%; overflow: hidden; }
 .hero { height: 65vh; background-size: cover; background-position: center; border-bottom: 6px solid var(--amarelo); }
 
+/* Ajustes Swiper Hero */
+.hero-swiper .swiper-pagination-bullet { background: var(--branco); opacity: 0.7; }
+.hero-swiper .swiper-pagination-bullet-active { background: var(--amarelo); opacity: 1; }
+.hero-swiper .swiper-button-next, .hero-swiper .swiper-button-prev { color: var(--amarelo); }
+
+
 /* --- RECEITAS --- */
-.recipes { display: flex; align-items: center; padding: 100px 20px; gap: 60px; }
+.recipes-carousel-section { padding: 100px 20px; position: relative; }
+.recipe-slide-item { display: flex; align-items: center; gap: 60px; padding: 20px 0; }
 .recipe-content { flex: 1; }
 .yellow-bar { width: 60px; height: 6px; background: var(--amarelo); margin-bottom: 20px; }
 .recipe-content h2 { color: var(--texto-dark); font-size: 3.5rem; font-weight: 900; line-height: 0.9; margin-bottom: 25px; }
 .recipe-content p { color: #555; font-size: 1.1rem; margin-bottom: 30px; max-width: 400px; }
 .recipe-image-wrapper { flex: 1; position: relative; }
+
+/* Controles Receitas */
+.recipes-prev, .recipes-next { position: absolute !important; top: 50% !important; transform: translateY(-50%); width: 50px !important; height: 50px !important; background: var(--azul-escuro); border-radius: 50%; color: var(--amarelo) !important; z-index: 10; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease; }
+.recipes-prev { left: 0px !important; }
+.recipes-next { right: 0px !important; }
+.recipes-prev::after, .recipes-next::after { font-size: 1.2rem !important; font-weight: bold; }
+.recipes-prev:hover, .recipes-next:hover { background: var(--texto-dark); transform: translateY(-50%) scale(1.1); }
+
+@media (max-width: 1200px) {
+    .recipes-prev { left: 10px !important; }
+    .recipes-next { right: 10px !important; }
+}
+
 
 @keyframes floatAnimation {
     0% { transform: translateY(0px); }

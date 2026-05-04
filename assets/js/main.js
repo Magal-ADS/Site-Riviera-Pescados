@@ -22,4 +22,43 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(data => {
             document.getElementById('footer-placeholder').innerHTML = data;
         });
+
+    // Inicializa o Swiper da Home se existir
+    if (document.querySelector('.hero-swiper')) {
+        new Swiper('.hero-swiper', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+        });
+    }
+
+    // Inicializa o Swiper de Receitas se existir
+    if (document.querySelector('.recipes-swiper')) {
+        new Swiper('.recipes-swiper', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 30,
+            navigation: {
+                nextEl: '.recipes-next',
+                prevEl: '.recipes-prev',
+            },
+            autoplay: {
+                delay: 6000,
+            },
+        });
+    }
 });
