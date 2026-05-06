@@ -84,7 +84,7 @@
 .catalog-section {
     padding-bottom: 80px;
     /* Imagem de fundo (frutos do mar/gelo) para toda a área de produtos */
-    background-image: url('../images/bg-catalog.jpg'); 
+    background-image: url('../images/bg-catalog.webp'); 
     background-repeat: repeat; 
     background-size: cover;
     background-position: center;
