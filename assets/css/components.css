@@ -172,6 +172,17 @@
     display: block;
 }
 
+/* Ajuste para a logo no rodapé não sobrepor o texto */
+.main-footer .logo {
+    margin-bottom: 30px;
+}
+
+.main-footer .logo img {
+    margin-bottom: 0;
+    height: 90px; /* Um pouco menor que no header para o rodapé */
+}
+
+
 .social-icons {
     display: flex;
     gap: 15px;
