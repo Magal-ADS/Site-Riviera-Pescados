@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Riviera Pescados | Quem Somos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -39,15 +40,35 @@
             </div>
             <div class="quality-col">
                 <h2>Qualidade</h2>
-                <p>A Riviera produz sua própria ração para alimentação das tilápias.</p>
-                <picture>
-                    <source srcset="assets/images/fabrica.webp" type="image/webp">
-                    <img src="assets/images/fabrica.png" alt="Linha de produção Riviera" onerror="this.onerror=null; this.src='assets/images/fabrica.png';">
-                </picture>
-                <div class="carousel-dots">
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
+                <div class="swiper quality-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <p>A Riviera produz sua própria ração para alimentação das tilápias.</p>
+                            <picture>
+                                <source srcset="assets/images/fabrica.webp" type="image/webp">
+                                <img src="assets/images/fabrica.webp" alt="Linha de produção Riviera">
+                            </picture>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <p>A qualidade que buscamos é aperfeiçoada diariamente em todas as etapas da produção.</p>
+                            <picture>
+                                <source srcset="assets/images/riviera.webp" type="image/webp">
+                                <img src="assets/images/riviera.webp" alt="Instalações Riviera">
+                            </picture>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="swiper-slide">
+                            <p>Rígido controle de qualidade garantindo 100% do peso final, sem adição de químicos.</p>
+                            <picture>
+                                <source srcset="assets/images/fabrica.webp" type="image/webp">
+                                <img src="assets/images/fabrica.webp" alt="Qualidade Riviera">
+                            </picture>
+                        </div>
+                    </div>
+                    <!-- Paginação Customizada -->
+                    <div class="swiper-pagination quality-pagination"></div>
                 </div>
             </div>
         </section>
@@ -70,6 +91,7 @@
     </main>
 
     <div id="footer-placeholder"></div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

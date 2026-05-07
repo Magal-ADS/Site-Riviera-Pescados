@@ -61,4 +61,19 @@ document.addEventListener("DOMContentLoaded", () => {
             },
         });
     }
+
+    // Inicializa o Swiper de Qualidade (Quem Somos)
+    if (document.querySelector('.quality-swiper')) {
+        new Swiper('.quality-swiper', {
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.quality-pagination',
+                clickable: true,
+            },
+        });
+    }
 });
