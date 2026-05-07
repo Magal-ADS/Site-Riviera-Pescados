@@ -2,7 +2,7 @@ const productsData = {
     'file-400g': {
         name: 'Filé de Tilápia',
         weight: '400g',
-        image: 'assets/images/produto-pacote.webp',
+        image: 'assets/images/File de Tilapia 400g.webp',
         description: 'Tilápia é fonte de proteínas e possui baixo índice de gordura. O corte de 400g é ideal para refeições rápidas e individuais.',
         ingredients: 'Filé de tilápia sem pele e sem espinha. Não contém glúten.',
         nutrition: 'Porção de 100g: Valor Energético 90kcal, Proteínas 20g, Gorduras Totais 1g.'
@@ -34,7 +34,7 @@ const productsData = {
     'granel-10kg': {
         name: 'Filé de Tilápia Granel',
         weight: 'Pacote 10 kg',
-        image: 'assets/images/riviera.webp',
+        image: 'assets/images/Filé de Tilápia Granel 10 kg.webp',
         description: 'Solução corporativa e para grandes famílias. Tilápia granel com o selo de qualidade Riviera.',
         ingredients: 'Filé de tilápia granel sem pele e sem espinha.',
         nutrition: 'Porção de 100g: Valor Energético 90kcal, Proteínas 20g, Gorduras Totais 1g.'
