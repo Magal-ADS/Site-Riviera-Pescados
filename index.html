@@ -40,7 +40,10 @@
                         </div>
                         <div class="recipe-image-wrapper">
                             <div class="blue-offset"></div>
-                            <img src="assets/images/receita-prato.webp" alt="Prato de Tilápia Riviera" class="img-curved">
+                            <picture>
+                                <source srcset="assets/images/receita-prato.webp" type="image/webp">
+                                <img src="assets/images/receita-prato.jpg" alt="Prato de Tilápia Riviera" class="img-curved" onerror="this.onerror=null; this.src='assets/images/receita-prato.jpg';">
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -55,7 +58,10 @@
                         </div>
                         <div class="recipe-image-wrapper">
                             <div class="blue-offset"></div>
-                            <img src="assets/images/receita.webp" alt="Receita Riviera" class="img-curved">
+                            <picture>
+                                <source srcset="assets/images/receita.webp" type="image/webp">
+                                <img src="assets/images/receita.jpg" alt="Receita Riviera" class="img-curved" onerror="this.onerror=null; this.src='assets/images/receita.jpg';">
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -71,18 +77,51 @@
             <div class="yellow-label"><h3>CONHEÇA NOSSOS PRODUTOS</h3></div>
         </div>
         <div class="container products-grid">
-            <a href="produtos.html" class="product-card"><img src="assets/images/produto-pacote.webp" alt="Filé"><h4>Filé de Tilápia<br><strong>400g</strong></h4></a>
-            <a href="produtos.html" class="product-card"><img src="assets/images/produto-pacote.webp" alt="Filé"><h4>Filé de Tilápia<br><strong>400g</strong></h4></a>
-            <a href="produtos.html" class="product-card"><img src="assets/images/produto-pacote.webp" alt="Filé"><h4>Filé de Tilápia<br><strong>400g</strong></h4></a>
+            <a href="produtos.html" class="product-card">
+                <picture>
+                    <source srcset="assets/images/produto-pacote.webp" type="image/webp">
+                    <img src="assets/images/produto-pacote.png" alt="Filé de Tilápia 400g" onerror="this.onerror=null; this.src='assets/images/produto-pacote.png';">
+                </picture>
+                <h4>Filé de Tilápia<br><strong>400g</strong></h4>
+            </a>
+            <a href="produtos.html" class="product-card">
+                <picture>
+                    <source srcset="assets/images/produto-pacote.webp" type="image/webp">
+                    <img src="assets/images/produto-pacote.png" alt="Filé de Tilápia 400g" onerror="this.onerror=null; this.src='assets/images/produto-pacote.png';">
+                </picture>
+                <h4>Filé de Tilápia<br><strong>400g</strong></h4>
+            </a>
+            <a href="produtos.html" class="product-card">
+                <picture>
+                    <source srcset="assets/images/produto-pacote.webp" type="image/webp">
+                    <img src="assets/images/produto-pacote.png" alt="Filé de Tilápia 400g" onerror="this.onerror=null; this.src='assets/images/produto-pacote.png';">
+                </picture>
+                <h4>Filé de Tilápia<br><strong>400g</strong></h4>
+            </a>
         </div>
     </section>
 
     <section class="social-media container">
         <h2>NOSSAS REDES SOCIAIS</h2>
         <div class="social-grid">
-            <div class="social-item"><img src="assets/images/social-1.webp" alt="Insta 1"></div>
-            <div class="social-item"><img src="assets/images/social-2.webp" alt="Insta 2"></div>
-            <div class="social-item"><img src="assets/images/social-3.webp" alt="Insta 3"></div>
+            <div class="social-item">
+                <picture>
+                    <source srcset="assets/images/social-1.webp" type="image/webp">
+                    <img src="assets/images/social-1.jpg" alt="Insta 1" onerror="this.onerror=null; this.src='assets/images/social-1.jpg';">
+                </picture>
+            </div>
+            <div class="social-item">
+                <picture>
+                    <source srcset="assets/images/social-2.webp" type="image/webp">
+                    <img src="assets/images/social-2.jpg" alt="Insta 2" onerror="this.onerror=null; this.src='assets/images/social-2.jpg';">
+                </picture>
+            </div>
+            <div class="social-item">
+                <picture>
+                    <source srcset="assets/images/social-3.webp" type="image/webp">
+                    <img src="assets/images/social-3.jpg" alt="Insta 3" onerror="this.onerror=null; this.src='assets/images/social-3.jpg';">
+                </picture>
+            </div>
         </div>
         <div class="social-footer"><a href="https://www.instagram.com/rivierapescados/" class="btn-secondary">Quero Seguir</a></div>
     </section>

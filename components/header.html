@@ -1,7 +1,12 @@
 <header class="main-header">
     <div class="container header-container">
         <div class="logo">
-            <a href="index.html"><img src="assets/images/riviera.webp" alt="Riviera Pescados"></a>
+            <a href="index.html">
+                <picture>
+                    <source srcset="assets/images/riviera.webp" type="image/webp">
+                    <img src="assets/images/riviera.png" alt="Riviera Pescados" onerror="this.onerror=null; this.src='assets/images/riviera.png';">
+                </picture>
+            </a>
         </div>
         <nav class="main-nav">
             <a href="index.html">Home</a>

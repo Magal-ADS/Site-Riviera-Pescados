@@ -9,6 +9,7 @@ html {
     --azul-claro: #4ebccf;
     --branco: #ffffff;
     --texto-dark: #3f406d;
+    --fonte-padrao: 'Segoe UI', Arial, sans-serif;
 }
 
 * {

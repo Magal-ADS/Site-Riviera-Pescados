@@ -32,6 +32,13 @@
 .main-nav a:hover::after, .main-nav a.active::after { width: 100%; }
 .main-nav a.active, .main-nav a:hover { color: var(--amarelo); }
 
+/* --- COMPONENTES GERAIS (BANNERS) --- */
+.yellow-box h1,
+.yellow-box h2,
+.yellow-box h3 {
+    color: var(--azul-escuro) !important; /* Garante que a cor do Header seja aplicada */
+}
+
 /* --- BOTÕES GERAIS --- */
 .btn-primary, .btn-secondary { background: var(--texto-dark); color: var(--branco); padding: 15px 45px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
 .btn-primary:hover, .btn-secondary:hover { transform: translateY(-4px); box-shadow: 0 8px 15px rgba(0,0,0,0.2); background: #2b2b52; }
@@ -108,57 +115,110 @@
     background-color: #2a2b4a;
 }
 
-/* --- FOOTER --- */
-.site-footer { background: var(--azul-escuro); color: var(--branco); padding: 70px 0; margin-top: 0; }
-.footer-grid { display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 60px; align-items: start; }
-.footer-logo { background-color: var(--branco); padding: 15px; border-radius: 5px; width: fit-content; margin-bottom: 24px; transition: transform 0.3s ease; }
-.footer-logo:hover { transform: scale(1.05); }
-.footer-logo img { max-width: 170px; height: auto; display: block; }
-.social-icons { display: flex; flex-wrap: wrap; gap: 15px; font-size: 1.2rem; }
-.social-icons a { color: var(--branco); text-decoration: none; transition: all 0.3s ease; display: inline-block; }
-.social-icons a:hover { color: var(--amarelo); transform: translateY(-5px) scale(1.1); }
-.footer-col h4 { font-size: 1.05rem; margin-bottom: 18px; color: var(--amarelo); text-transform: uppercase; letter-spacing: 0.02em; }
-.footer-col ul { list-style: none; padding: 0; margin: 0; }
-.footer-col li + li { margin-top: 15px; }
-.footer-col a { color: rgba(255, 255, 255, 0.9); text-decoration: none; transition: color 0.3s ease, padding-left 0.3s ease; }
-.footer-col a:hover { color: var(--amarelo); padding-left: 8px; }
+/* --- RODAPÉ (FOOTER) RESTAURADO --- */
+.main-footer {
+    background-color: var(--azul-escuro) !important; /* Força a cor de fundo da marca */
+    width: 100% !important;
+    padding: 60px 0;
+    color: var(--branco);
+    font-family: var(--fonte-padrao);
+    display: block;
+}
 
-/* --- RESPONSIVO COMPONENTES --- */
-@media (max-width: 992px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinha os itens no topo */
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.brand-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinhado à esquerda conforme solicitado */
+    max-width: 320px; /* Limita a largura para não quebrar as outras colunas */
+}
+
+.footer-history {
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 12px; /* Margem entre os parágrafos */
+}
+
+.footer-history:last-of-type {
+    margin-bottom: 25px; /* Margem maior após o último parágrafo para separar das redes sociais */
+}
+
+.footer-highlight {
+    color: var(--amarelo);
+    font-weight: 600;
+}
+
+.footer-logo-box {
+    background: var(--branco);
+    padding: 20px 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    width: fit-content;
+}
+
+.footer-logo-box img {
+    max-width: 150px; /* Limite rigoroso de tamanho conforme solicitado */
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: var(--branco);
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--amarelo);
+}
+
+.footer-col h3 {
+    color: var(--amarelo) !important; /* Títulos sempre em amarelo */
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 15px;
+}
+
+.footer-col ul li a {
+    color: #e0e0e0 !important; /* Garante contraste no fundo escuro */
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: var(--branco) !important;
+}
+
+/* --- RESPONSIVO --- */
 @media (max-width: 768px) {
-    .header-container { flex-direction: column; align-items: center; }
-
-    /* Adicionado para ajustar a logo vazada no mobile */
-    .logo img {
-        height: 85px;
-        margin-bottom: -20px;
-    }
-
-    .main-nav { justify-content: center; gap: 12px 16px; }
-    
-    /* --- RESPONSIVO NEWSLETTER --- */
-    .newsletter-content {
-        padding: 40px 20px;
-        background-size: 50% auto, cover; /* Diminui o peixe no celular */
-        text-align: center; /* Volta pro centro no mobile */
-    }
-    
-    .newsletter-content h2,
-    .newsletter-content p,
-    .newsletter-form {
-        max-width: 100%; /* Ocupa tudo no celular */
-    }
-    
-    .newsletter-form {
+    .footer-grid {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    
-    .newsletter-form button {
-        padding: 15px;
-    }
-
-    .footer-grid { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-    .footer-logo { margin: 0 auto 24px auto; }
-    .social-icons { justify-content: center; }
-    .footer-col a:hover { padding-left: 0; }
 }
