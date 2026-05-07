@@ -51,7 +51,7 @@
 }
 .article-header h1 {
     font-size: 3rem;
-    color: var(--texto-dark);
+    color: var(--azul-escuro);
     line-height: 1.2;
 }
 .article-content {
@@ -71,7 +71,7 @@
 }
 .article-text-body h3 {
     font-size: 1.8rem;
-    color: var(--texto-dark);
+    color: var(--azul-escuro);
     margin: 40px 0 20px 0;
 }
 .article-text-body h4 {

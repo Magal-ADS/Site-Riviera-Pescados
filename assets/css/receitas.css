@@ -56,7 +56,7 @@
 }
 
 .recipe-card-item h4 {
-    color: var(--texto-dark);
+    color: var(--azul-escuro);
     font-size: 1.1rem;
     font-weight: 700;
     line-height: 1.4;

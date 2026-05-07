@@ -47,7 +47,7 @@
     text-align: center;
     text-decoration: none;
     border-radius: 8px;
-    color: var(--texto-dark);
+    color: var(--azul-escuro);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,7 +64,7 @@
 .contact-card i {
     font-size: 3.5rem;
     margin-bottom: 25px;
-    color: var(--texto-dark);
+    color: var(--azul-escuro);
     transition: transform 0.3s ease;
 }
 

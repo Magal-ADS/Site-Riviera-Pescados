@@ -55,7 +55,7 @@
 }
 
 .blog-card-item h4 {
-    color: var(--texto-dark);
+    color: var(--azul-escuro);
     font-size: 1.15rem;
     font-weight: 800;
     line-height: 1.3;

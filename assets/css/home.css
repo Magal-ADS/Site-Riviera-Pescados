@@ -13,7 +13,7 @@
 .recipe-slide-item { display: flex; align-items: center; gap: 60px; padding: 20px 0; }
 .recipe-content { flex: 1; }
 .yellow-bar { width: 60px; height: 6px; background: var(--amarelo); margin-bottom: 20px; }
-.recipe-content h2 { color: var(--texto-dark); font-size: 3.5rem; font-weight: 900; line-height: 0.9; margin-bottom: 25px; }
+.recipe-content h2 { color: var(--azul-escuro); font-size: 3.5rem; font-weight: 900; line-height: 0.9; margin-bottom: 25px; }
 .recipe-content p { color: #555; font-size: 1.1rem; margin-bottom: 30px; max-width: 400px; }
 .recipe-image-wrapper { flex: 1; position: relative; }
 
@@ -22,7 +22,7 @@
 .recipes-prev { left: 0px !important; }
 .recipes-next { right: 0px !important; }
 .recipes-prev::after, .recipes-next::after { font-size: 1.2rem !important; font-weight: bold; }
-.recipes-prev:hover, .recipes-next:hover { background: var(--texto-dark); transform: translateY(-50%) scale(1.1); }
+.recipes-prev:hover, .recipes-next:hover { background: var(--azul-escuro); transform: translateY(-50%) scale(1.1); }
 
 @media (max-width: 1200px) {
     .recipes-carousel-section { padding: 80px 40px; }
@@ -45,18 +45,18 @@
 .products-header { position: relative; height: 50px; background: var(--azul-claro); }
 .yellow-label { background: var(--amarelo); display: inline-block; padding: 15px 50px; position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
 .yellow-label:hover { transform: translate(-50%, -55%); }
-.yellow-label h3 { color: var(--texto-dark); font-weight: 900; margin: 0; }
+.yellow-label h3 { color: var(--azul-escuro); font-weight: 900; margin: 0; }
 .products-grid { background: var(--azul-claro); display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; padding: 50px 20px 80px 20px; }
 
 .product-card { background: var(--branco); padding: 30px; border-radius: 15px; text-align: center; width: 300px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease; }
 .product-card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
 .product-card img { width: 100%; margin-bottom: 20px; transition: transform 0.4s ease; }
 .product-card:hover img { transform: scale(1.08) rotate(2deg); }
-.product-card h4 { color: var(--texto-dark); font-size: 1.2rem; }
+.product-card h4 { color: var(--azul-escuro); font-size: 1.2rem; }
 
 /* --- REDES SOCIAIS --- */
 .social-media { padding: 80px 20px; text-align: center; }
-.social-media h2 { color: var(--texto-dark); font-weight: 900; font-size: 2.5rem; margin-bottom: 50px; }
+.social-media h2 { color: var(--azul-escuro); font-weight: 900; font-size: 2.5rem; margin-bottom: 50px; }
 .social-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; }
 .social-item { width: 350px; height: 350px; background: #eee; border-radius: 10px; overflow: hidden; position: relative; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: box-shadow 0.3s ease; }
 .social-item:hover { box-shadow: 0 15px 30px rgba(0,0,0,0.2); }

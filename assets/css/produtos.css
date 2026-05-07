@@ -154,7 +154,7 @@
 }
 
 .page-num:hover, .page-num.active {
-    background-color: var(--texto-dark);
+    background-color: var(--azul-escuro);
     color: var(--branco);
 }
 
@@ -166,7 +166,7 @@
 }
 
 .page-arrow:hover {
-    color: var(--texto-dark);
+    color: var(--azul-escuro);
     background-color: #f0f0f0;
 }
 

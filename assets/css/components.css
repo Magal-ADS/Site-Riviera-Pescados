@@ -40,7 +40,7 @@
 }
 
 /* --- BOTÕES GERAIS --- */
-.btn-primary, .btn-secondary { background: var(--texto-dark); color: var(--branco); padding: 15px 45px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.btn-primary, .btn-secondary { background: var(--azul-escuro); color: var(--branco); padding: 15px 45px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
 .btn-primary:hover, .btn-secondary:hover { transform: translateY(-4px); box-shadow: 0 8px 15px rgba(0,0,0,0.2); background: #2b2b52; }
 
 /* --- NEWSLETTER --- */
@@ -100,7 +100,7 @@
 }
 
 .newsletter-form button {
-    background-color: #3f406d; /* Cor do botão do Figma */
+    background-color: var(--azul-escuro); /* Cor ajustada para o padrão oficial */
     color: var(--branco);
     border: none;
     padding: 0 35px;

@@ -24,6 +24,10 @@ body {
     background-color: var(--branco);
 }
 
+h1, h2, h3, h4 {
+    color: var(--azul-escuro);
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
