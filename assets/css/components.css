@@ -160,7 +160,8 @@
     background: var(--branco);
     padding: 20px 30px;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 25px;
     width: fit-content;
 }
 
@@ -191,6 +192,7 @@
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: bold;
+    margin-top: 0;
     margin-bottom: 25px;
 }
 
