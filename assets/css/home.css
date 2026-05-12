@@ -1,6 +1,6 @@
 /* --- HERO BANNER --- */
 .hero-container { position: relative; width: 100%; overflow: hidden; }
-.hero { height: 65vh; background-size: cover; background-position: center; border-bottom: 6px solid var(--amarelo); }
+.hero { display: block; height: 65vh; background-size: cover; background-position: center; border-bottom: 6px solid var(--amarelo); }
 
 /* Ajustes Swiper Hero */
 .hero-swiper .swiper-pagination-bullet { background: var(--branco); opacity: 0.7; }
