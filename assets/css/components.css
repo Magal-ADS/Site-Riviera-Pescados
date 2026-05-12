@@ -15,8 +15,8 @@
 }
 
 .logo img { 
-    height: 110px; 
-    margin-bottom: -50px; 
+    height: 180px; 
+    margin-bottom: -90px; 
     position: relative;
     z-index: 1000; 
     filter: drop-shadow(0 6px 8px rgba(0,0,0,0.3)); 
@@ -174,12 +174,14 @@
 
 /* Ajuste para a logo no rodapé não sobrepor o texto */
 .main-footer .logo {
-    margin-bottom: 30px;
+    margin-top: -45px; /* Puxa para cima para alinhar o topo com os outros títulos */
+    margin-bottom: 0;
+    margin-left: -18px; /* Ajuste proporcional ao novo tamanho para manter o alinhamento */
 }
 
 .main-footer .logo img {
     margin-bottom: 0;
-    height: 90px; /* Um pouco menor que no header para o rodapé */
+    height: 180px; /* Aumentado para 180px conforme solicitado */
 }
 
 
@@ -233,5 +235,9 @@
         flex-direction: column;
         align-items: center;
         text-align: center;
+    }
+
+    .main-footer .logo {
+        margin-left: 0;
     }
 }
