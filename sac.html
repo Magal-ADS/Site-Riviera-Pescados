@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riviera Pescados | SAC</title>
+    <link rel="shortcut icon" href="assets/images/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="form-page-container">
+        <div class="form-header-box">
+            <h2>SAC Riviera</h2>
+            <p>Estamos prontos para ouvir você. Envie sua dúvida, sugestão, elogio ou solicitação para nossa equipe.</p>
+        </div>
+
+        <section class="riviera-form-box">
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label>Nome completo</label>
+                        <input type="text" name="nome" placeholder="Digite seu nome completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Telefone / WhatsApp</label>
+                        <input type="tel" name="telefone" placeholder="(00) 00000-0000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cidade</label>
+                        <input type="text" name="cidade" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Estado</label>
+                        <input type="text" name="estado" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Assunto</label>
+                        <select name="assunto" required>
+                            <option value="">Selecione o assunto...</option>
+                            <option value="duvida">Dúvida</option>
+                            <option value="sugestao">Sugestão</option>
+                            <option value="elogio">Elogio</option>
+                            <option value="reclamacao">Reclamação</option>
+                            <option value="informacoes">Informações sobre produtos</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Produto relacionado</label>
+                        <input type="text" name="produto">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Número do lote (opcional)</label>
+                        <input type="text" name="lote">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Data da compra (opcional)</label>
+                        <input type="date" name="data_compra">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Local onde comprou o produto</label>
+                        <input type="text" name="local_compra">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Mensagem</label>
+                        <textarea name="mensagem" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Upload de imagens ou documentos</label>
+                        <input type="file" name="arquivos" multiple>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary form-submit-btn">Enviar mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

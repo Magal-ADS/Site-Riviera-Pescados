@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riviera Pescados | Seja um Fornecedor</title>
+    <link rel="shortcut icon" href="assets/images/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="form-page-container">
+        <div class="form-header-box">
+            <h2>Cadastro de Fornecedores Riviera</h2>
+            <p>Tem interesse em fornecer produtos ou serviços para a Riviera? Cadastre sua empresa e nossa equipe avaliará seu perfil.</p>
+        </div>
+
+        <section class="riviera-form-box">
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label>Razão social</label>
+                        <input type="text" name="razao_social" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Nome fantasia</label>
+                        <input type="text" name="nome_fantasia">
+                    </div>
+
+                    <div class="form-group">
+                        <label>CNPJ</label>
+                        <input type="text" name="cnpj" placeholder="00.000.000/0000-00" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Inscrição estadual</label>
+                        <input type="text" name="inscricao_estadual">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Nome do responsável</label>
+                        <input type="text" name="responsavel" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cargo do responsável</label>
+                        <input type="text" name="cargo">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Telefone / WhatsApp</label>
+                        <input type="tel" name="telefone" placeholder="(00) 00000-0000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cidade</label>
+                        <input type="text" name="cidade" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Estado</label>
+                        <input type="text" name="estado" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Site da empresa</label>
+                        <input type="url" name="site" placeholder="https://www.suaempresa.com.br">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Segmento de atuação</label>
+                        <input type="text" name="segmento">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Tipo de fornecimento</label>
+                        <select name="tipo_fornecimento" required>
+                            <option value="">Selecione...</option>
+                            <option value="produtos">Produtos</option>
+                            <option value="servicos">Serviços</option>
+                            <option value="transporte">Transporte</option>
+                            <option value="equipamentos">Equipamentos</option>
+                            <option value="embalagens">Embalagens</option>
+                            <option value="materia_prima">Matéria-prima</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Descreva os produtos ou serviços oferecidos</label>
+                        <textarea name="descricao" rows="4" required></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Possui certificações?</label>
+                        <div class="radio-group-inline">
+                            <label class="radio-option"><input type="radio" name="certificacoes" value="sim"> Sim</label>
+                            <label class="radio-option"><input type="radio" name="certificacoes" value="nao" checked> Não</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Quais certificações possui?</label>
+                        <input type="text" name="quais_certificacoes">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Principais clientes atendidos</label>
+                        <input type="text" name="clientes">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Upload de apresentação institucional ou catálogo</label>
+                        <input type="file" name="apresentacao">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary form-submit-btn">Cadastrar fornecedor</button>
+            </form>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

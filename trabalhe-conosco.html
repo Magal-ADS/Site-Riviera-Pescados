@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riviera Pescados | Trabalhe Conosco</title>
+    <link rel="shortcut icon" href="assets/images/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="form-page-container">
+        <div class="form-header-box">
+            <h2>Faça parte da equipe Riviera</h2>
+            <p>Quer crescer junto com a Riviera Pescados? Preencha seus dados e envie seu currículo para nosso time de RH.</p>
+        </div>
+
+        <section class="riviera-form-box">
+            <form action="#" method="POST" enctype="multipart/form-data">
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label>Nome completo</label>
+                        <input type="text" name="nome" placeholder="Digite seu nome completo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Data de nascimento</label>
+                        <input type="date" name="data_nascimento" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>CPF</label>
+                        <input type="text" name="cpf" placeholder="000.000.000-00" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Estado civil</label>
+                        <select name="estado_civil">
+                            <option value="">Selecione...</option>
+                            <option value="solteiro">Solteiro(a)</option>
+                            <option value="casado">Casado(a)</option>
+                            <option value="divorciado">Divorciado(a)</option>
+                            <option value="viúvo">Viúvo(a)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Telefone / WhatsApp</label>
+                        <input type="tel" name="telefone" placeholder="(00) 00000-0000" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>E-mail</label>
+                        <input type="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cidade</label>
+                        <input type="text" name="cidade" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Estado</label>
+                        <input type="text" name="estado" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Endereço completo</label>
+                        <input type="text" name="endereco" placeholder="Rua, número, bairro">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Possui CNH?</label>
+                        <div class="radio-group-inline">
+                            <label class="radio-option"><input type="radio" name="cnh" value="sim"> Sim</label>
+                            <label class="radio-option"><input type="radio" name="cnh" value="nao" checked> Não</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Categoria da CNH</label>
+                        <input type="text" name="cnh_categoria" placeholder="Ex: AB">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cargo de interesse</label>
+                        <input type="text" name="cargo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Área de interesse</label>
+                        <select name="area" required>
+                            <option value="">Selecione...</option>
+                            <option value="producao">Produção</option>
+                            <option value="administrativo">Administrativo</option>
+                            <option value="comercial">Comercial</option>
+                            <option value="logistica">Logística</option>
+                            <option value="qualidade">Qualidade</option>
+                            <option value="financeiro">Financeiro</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Escolaridade</label>
+                        <select name="escolaridade">
+                            <option value="">Selecione...</option>
+                            <option value="fundamental">Ensino Fundamental</option>
+                            <option value="medio">Ensino Médio</option>
+                            <option value="tecnico">Ensino Técnico</option>
+                            <option value="superior">Ensino Superior</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Última empresa em que trabalhou</label>
+                        <input type="text" name="ultima_empresa">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tempo de experiência na área</label>
+                        <input type="text" name="tempo_experiencia">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Pretensão salarial</label>
+                        <input type="text" name="pretensao">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Disponibilidade de horário</label>
+                        <input type="text" name="disponibilidade">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Conte um pouco sobre você</label>
+                        <textarea name="sobre_voce" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Upload de currículo (PDF/DOC)</label>
+                        <input type="file" name="curriculo" accept=".pdf,.doc,.docx" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary form-submit-btn">Enviar currículo</button>
+            </form>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

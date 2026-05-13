@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riviera Pescados | Contato Comercial</title>
+    <link rel="shortcut icon" href="assets/images/favicon.webp" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="header-placeholder"></div>
+
+    <main class="form-page-container">
+        <div class="form-header-box">
+            <h2>Fale com o Comercial Riviera</h2>
+            <p>Quer levar os produtos Riviera para seu negócio? Nossa equipe comercial entrará em contato com você.</p>
+        </div>
+
+        <section class="riviera-form-box">
+            <form action="#" method="POST">
+                <div class="form-grid">
+                    <div class="form-group full-width">
+                        <label>Nome completo</label>
+                        <input type="text" name="nome" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Nome da empresa</label>
+                        <input type="text" name="empresa" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>CNPJ</label>
+                        <input type="text" name="cnpj" placeholder="00.000.000/0000-00" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Segmento da empresa</label>
+                        <select name="segmento" required>
+                            <option value="">Selecione...</option>
+                            <option value="supermercado">Supermercado</option>
+                            <option value="restaurante">Restaurante</option>
+                            <option value="peixaria">Peixaria</option>
+                            <option value="distribuidor">Distribuidor</option>
+                            <option value="mercado_autonomo">Mercado Autônomo</option>
+                            <option value="hotel">Hotel</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cidade</label>
+                        <input type="text" name="cidade" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Estado</label>
+                        <input type="text" name="estado" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Telefone / WhatsApp</label>
+                        <input type="tel" name="telefone" placeholder="(00) 00000-0000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>E-mail</label>
+                        <input type="email" name="email" placeholder="seu@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Qual produto tem interesse?</label>
+                        <select name="produto_interesse">
+                            <option value="">Selecione...</option>
+                            <option value="file">Filé de Tilápia</option>
+                            <option value="empanados">Empanados</option>
+                            <option value="iscas">Iscas</option>
+                            <option value="completa">Linha completa</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Volume médio de compra mensal</label>
+                        <input type="text" name="volume">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Já trabalha com pescados?</label>
+                        <div class="radio-group-inline">
+                            <label class="radio-option"><input type="radio" name="trabalha_pescados" value="sim"> Sim</label>
+                            <label class="radio-option"><input type="radio" name="trabalha_pescados" value="nao"> Não</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Como conheceu a Riviera?</label>
+                        <input type="text" name="como_conheceu">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label>Mensagem / observações</label>
+                        <textarea name="mensagem" rows="4"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary form-submit-btn">Quero falar com o comercial</button>
+            </form>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
