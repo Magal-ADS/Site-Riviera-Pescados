@@ -77,29 +77,138 @@
         <div class="products-header">
             <div class="yellow-label"><h3>CONHEÇA NOSSOS PRODUTOS</h3></div>
         </div>
-        <div class="container products-grid">
-            <a href="produto-interna.html?id=file-800g" class="product-card">
-                <picture>
-                    <source srcset="assets/images/File de Tilapia 800g.webp" type="image/webp">
-                    <img src="assets/images/File de Tilapia 800g.webp" alt="Filé de Tilápia 800g" onerror="this.onerror=null; this.src='assets/images/File de Tilapia 800g.webp';">
-                </picture>
-                <h4>Filé de Tilápia<br><strong>800g</strong></h4>
-            </a>
-            <a href="produto-interna.html?id=file-2kg" class="product-card">
-                <picture>
-                    <source srcset="assets/images/File de Tilapia 2Kg (2).webp" type="image/webp">
-                    <img src="assets/images/File de Tilapia 2Kg (2).webp" alt="Filé de Tilápia 2KG" onerror="this.onerror=null; this.src='assets/images/File de Tilapia 2Kg (2).webp';">
-                </picture>
-                <h4>Filé de Tilápia<br><strong>2KG</strong></h4>
-            </a>
-            <a href="produto-interna.html?id=file-400g" class="product-card">
-                <picture>
-                    <source srcset="assets/images/Filé-de-Tilápia-400g.webp" type="image/webp">
-                    <img src="assets/images/Filé-de-Tilápia-400g.webp" alt="Filé de Tilápia 400g">
-                </picture>
-                <h4>Filé de Tilápia<br><strong>400g</strong></h4>
-            </a>
+        
+        <div class="container-carousel-main">
+            <button class="products-nav-btn prev" onclick="scrollProducts('left')" aria-label="Anterior">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            
+            <div class="products-viewport" id="productsViewport">
+                <div class="products-grid-custom">
+                    <!-- Produto 1 -->
+                    <a href="produto-interna.html?id=file-400g" class="product-card">
+                        <picture>
+                            <source srcset="assets/images/Filé-de-Tilápia-400g.webp" type="image/webp">
+                            <img src="assets/images/Filé-de-Tilápia-400g.webp" alt="Filé de Tilápia 400g">
+                        </picture>
+                        <h4>Filé de Tilápia<br><strong>400g</strong></h4>
+                    </a>
+                    <!-- Produto 2 -->
+                    <a href="produto-interna.html?id=file-800g" class="product-card">
+                        <picture>
+                            <source srcset="assets/images/File de Tilapia 800g.webp" type="image/webp">
+                            <img src="assets/images/File de Tilapia 800g.webp" alt="Filé de Tilápia 800g" onerror="this.onerror=null; this.src='assets/images/File de Tilapia 800g.webp';">
+                        </picture>
+                        <h4>Filé de Tilápia<br><strong>800g</strong></h4>
+                    </a>
+                    <!-- Produto 3 -->
+                    <a href="produto-interna.html?id=file-2kg" class="product-card">
+                        <picture>
+                            <source srcset="assets/images/File de Tilapia 2Kg (2).webp" type="image/webp">
+                            <img src="assets/images/File de Tilapia 2Kg (2).webp" alt="Filé de Tilápia 2KG" onerror="this.onerror=null; this.src='assets/images/File de Tilapia 2Kg (2).webp';">
+                        </picture>
+                        <h4>Filé de Tilápia<br><strong>2KG</strong></h4>
+                    </a>
+                    <!-- Produto 4 -->
+                    <a href="produto-interna.html?id=isca-400g" class="product-card">
+                        <picture>
+                            <source srcset="assets/images/Isca de Tilapia 400g.webp" type="image/webp">
+                            <img src="assets/images/Isca de Tilapia 400g.webp" alt="Isca de Tilápia 400g" onerror="this.onerror=null; this.src='assets/images/Isca de Tilapia 400g.webp';">
+                        </picture>
+                        <h4>Isca de Tilápia<br><strong>400g</strong></h4>
+                    </a>
+                    <!-- Produto 5 -->
+                    <a href="produto-interna.html?id=granel-10kg" class="product-card">
+                        <picture>
+                            <source srcset="assets/images/Filé-de-Tilápia-Granel-10-kg.webp" type="image/webp">
+                            <img src="assets/images/Filé-de-Tilápia-Granel-10-kg.webp" alt="Filé de Tilápia Granel 10kg">
+                        </picture>
+                        <h4>Filé de Tilápia Granel<br><strong>Pacote 10 kg</strong></h4>
+                    </a>
+                </div>
+            </div>
+
+            <button class="products-nav-btn next" onclick="scrollProducts('right')" aria-label="Próximo">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
+
+        <style>
+            .container-carousel-main {
+                background: var(--azul-claro);
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding: 0 50px;
+                max-width: 1320px;
+                margin: 0 auto;
+            }
+            .products-viewport {
+                overflow: hidden;
+                width: 100%;
+                scroll-behavior: smooth;
+                padding: 50px 0 80px 0;
+            }
+            .products-grid-custom {
+                display: flex;
+                gap: 30px; /* Mantém o gap original */
+                transition: all 0.5s ease;
+            }
+            .products-grid-custom .product-card {
+                flex: 0 0 calc(33.333% - 20px); /* Garante exatamente 3 por vez */
+                min-width: calc(33.333% - 20px);
+                box-sizing: border-box;
+            }
+            .products-nav-btn {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                background: var(--azul-escuro);
+                color: var(--amarelo);
+                border: none;
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                cursor: pointer;
+                z-index: 10;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.2rem;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            }
+            .products-nav-btn:hover {
+                background: var(--amarelo);
+                color: var(--azul-escuro);
+                transform: translateY(-50%) scale(1.1);
+            }
+            .products-nav-btn.prev { left: 10px; }
+            .products-nav-btn.next { right: 10px; }
+
+            @media (max-width: 1024px) {
+                .products-grid-custom .product-card {
+                    flex: 0 0 calc(50% - 15px);
+                    min-width: calc(50% - 15px);
+                }
+            }
+            @media (max-width: 768px) {
+                .container-carousel-main { padding: 0 40px; }
+                .products-grid-custom .product-card {
+                    flex: 0 0 100%;
+                    min-width: 100%;
+                }
+            }
+        </style>
+
+        <script>
+            function scrollProducts(direction) {
+                const viewport = document.getElementById('productsViewport');
+                const cardWidth = viewport.querySelector('.product-card').offsetWidth + 30; // largura + gap
+                const scrollAmount = direction === 'left' ? -cardWidth : cardWidth;
+                viewport.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        </script>
     </section>
 
     <section class="social-media container">
