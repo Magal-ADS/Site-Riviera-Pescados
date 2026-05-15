@@ -16,24 +16,9 @@
     <section class="hero-container">
         <div class="swiper hero-swiper">
             <div class="swiper-wrapper">
-                <a href="blog.html" class="swiper-slide hero">
-                    <img src="https://res.cloudinary.com/dcdp8vghh/image/upload/f_auto,q_auto,w_1920/v1/banner-carrosel-2" 
-                         alt="Banner Blog" 
-                         fetchpriority="high"
-                         class="hero-img">
-                </a>
-                <a href="produtos.html" class="swiper-slide hero">
-                    <img src="https://res.cloudinary.com/dcdp8vghh/image/upload/f_auto,q_auto,w_1920/v1/banner-carrosel-3" 
-                         alt="Banner Produtos" 
-                         loading="lazy"
-                         class="hero-img">
-                </a>
-                <a href="receitas.html" class="swiper-slide hero">
-                    <img src="https://res.cloudinary.com/dcdp8vghh/image/upload/f_auto,q_auto,w_1920/v1/banner-carrosel-4" 
-                         alt="Banner Receitas" 
-                         loading="lazy"
-                         class="hero-img">
-                </a>
+                <a href="blog.html" class="swiper-slide hero" style="background-image: url('assets/images/banner-carrosel-2.webp');"></a>
+                <a href="produtos.html" class="swiper-slide hero" style="background-image: url('assets/images/banner-carrosel-3.webp');"></a>
+                <a href="receitas.html" class="swiper-slide hero" style="background-image: url('assets/images/banner-carrosel-4.webp');"></a>
             </div>
             <!-- Controles do Swiper -->
             <div class="swiper-pagination"></div>
@@ -41,28 +26,6 @@
             <div class="swiper-button-prev"></div>
         </div>
     </section>
-
-    <style>
-        .hero-container .hero {
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 600px; /* Ajuste conforme sua necessidade */
-        }
-        .hero-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        @media (max-width: 768px) {
-            .hero-container .hero { height: 400px; }
-        }
-    </style>
 
     <section class="recipes-carousel-section container">
         <div class="swiper recipes-swiper">
@@ -309,30 +272,25 @@
         <h2>NOSSAS REDES SOCIAIS</h2>
         <div class="social-grid">
             <a href="https://www.instagram.com/rivierapescados/" target="_blank" rel="noopener noreferrer" class="social-item">
-                <img src="https://res.cloudinary.com/dcdp8vghh/image/upload/f_auto,q_auto,w_400/v1/social-1_gxpcwu" 
-                     alt="Instagram Riviera 1" 
-                     loading="lazy">
+                <picture>
+                    <source srcset="assets/images/social-1.webp" type="image/webp">
+                    <img src="assets/images/social-1.jpg" alt="Insta 1" onerror="this.onerror=null; this.src='assets/images/social-1.jpg';">
+                </picture>
             </a>
             <a href="https://www.instagram.com/rivierapescados/" target="_blank" rel="noopener noreferrer" class="social-item">
-                <img src="https://res.cloudinary.com/dcdp8vghh/image/upload/f_auto,q_auto,w_400/v1/social-2_shzaji" 
-                     alt="Instagram Riviera 2" 
-                     loading="lazy">
+                <picture>
+                    <source srcset="assets/images/social-2.webp" type="image/webp">
+                    <img src="assets/images/social-2.jpg" alt="Insta 2" onerror="this.onerror=null; this.src='assets/images/social-2.jpg';">
+                </picture>
             </a>
             <a href="https://www.instagram.com/rivierapescados/" target="_blank" rel="noopener noreferrer" class="social-item">
-                <img src="https://res.cloudinary.com/dcdp8vghh/image/upload/f_auto,q_auto,w_400/v1/social-3_v8wwc9" 
-                     alt="Instagram Riviera 3" 
-                     loading="lazy">
+                <picture>
+                    <source srcset="assets/images/social-3.webp" type="image/webp">
+                    <img src="assets/images/social-3.jpg" alt="Insta 3" onerror="this.onerror=null; this.src='assets/images/social-3.jpg';">
+                </picture>
             </a>
         </div>
         <div class="social-footer"><a href="https://www.instagram.com/rivierapescados/" class="btn-secondary">Quero Seguir</a></div>
-    </section>
-
-    <div id="footer-placeholder"></div>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="assets/js/main.js"></script>
-</body>
-</html>
-instagram.com/rivierapescados/" class="btn-secondary">Quero Seguir</a></div>
     </section>
 
     <div id="footer-placeholder"></div>
