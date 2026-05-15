@@ -61,3 +61,12 @@
     font-weight: 700;
     line-height: 1.4;
 }
+
+/* --- RESPONSIVO RECEITAS --- */
+@media (max-width: 768px) {
+    .hero-receitas { height: 40vh; }
+    .yellow-box { padding: 20px 30px; }
+    .yellow-box h1 { font-size: 2.2rem; }
+    .recipes-grid-container { gap: 20px; }
+    .recipe-card-item { width: 100%; max-width: 320px; }
+}

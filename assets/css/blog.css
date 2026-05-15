@@ -72,8 +72,12 @@
 /* --- RESPONSIVO BLOG --- */
 @media (max-width: 992px) {
     .blog-grid-container { grid-template-columns: repeat(2, 1fr); }
+    .yellow-box h1 { font-size: 3.5rem; }
 }
 
 @media (max-width: 768px) {
+    .hero-blog { height: 40vh; }
+    .yellow-box { padding: 20px 30px; }
+    .yellow-box h1 { font-size: 2.2rem; }
     .blog-grid-container { grid-template-columns: 1fr; gap: 40px; }
 }

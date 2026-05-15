@@ -162,9 +162,23 @@
 .accordion-content { padding: 0 25px 20px 25px; color: #555; }
 
 /* --- RESPONSIVO --- */
+@media (max-width: 991px) {
+    .product-text-info h1 { font-size: 2.8rem; }
+    .product-description { max-width: 100%; }
+}
+
 @media (max-width: 768px) {
+    .product-banner-wrapper {
+        background: var(--azul-claro);
+        padding-top: 20px;
+    }
     .product-main-info { flex-direction: column; gap: 30px; }
-    .product-text-info h1 { font-size: 2.5rem; }
+    .product-image-box { padding: 20px; }
+    .product-text-info { text-align: center; padding-top: 0; }
+    .product-text-info h1 { font-size: 2.2rem; }
+    .product-weight { font-size: 1.4rem; }
+    .product-icons { justify-content: center; }
+    .btn-download-pdf { width: 100%; justify-content: center; }
 }
 
 /* --- BOTÃO DE DOWNLOAD PDF --- */

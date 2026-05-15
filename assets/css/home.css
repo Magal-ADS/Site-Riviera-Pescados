@@ -64,9 +64,68 @@
 .social-item:hover img { transform: scale(1.15); }
 
 /* --- RESPONSIVO HOME --- */
+@media (max-width: 991px) {
+    .recipe-slide-item {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .recipe-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .recipe-content p {
+        margin: 0 auto 30px;
+    }
+
+    .social-item {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
 @media (max-width: 768px) {
+    .hero {
+        height: 40vh;
+    }
+
+    .recipes-carousel-section {
+        padding: 50px 20px;
+    }
+
+    .recipe-content h2 {
+        font-size: 2rem;
+    }
+
+    .products-area {
+        margin-top: 60px;
+    }
+
+    .yellow-label {
+        padding: 10px 30px;
+        width: 80%;
+        text-align: center;
+    }
+
+    .yellow-label h3 {
+        font-size: 1.2rem;
+    }
+
+    .products-grid {
+        padding: 40px 10px;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .social-media h2 {
+        font-size: 1.8rem;
+    }
+
     .recipes { flex-direction: column; text-align: center; }
-    .recipe-content h2 { font-size: 2.5rem; }
     .yellow-bar { margin: 0 auto 20px; }
     .blue-offset { display: none; }
     .img-curved { animation: none; }

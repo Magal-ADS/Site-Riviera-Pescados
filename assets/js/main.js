@@ -14,6 +14,27 @@ document.addEventListener("DOMContentLoaded", () => {
                     link.classList.add('active');
                 }
             });
+
+            // Lógica do Menu Mobile
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const mainNav = document.querySelector('.main-nav');
+
+            if (menuToggle && mainNav) {
+                menuToggle.addEventListener('click', () => {
+                    menuToggle.classList.toggle('active');
+                    mainNav.classList.toggle('active');
+                    document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : 'auto';
+                });
+
+                // Fecha o menu ao clicar em um link
+                navLinks.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menuToggle.classList.remove('active');
+                        mainNav.classList.remove('active');
+                        document.body.style.overflow = 'auto';
+                    });
+                });
+            }
         });
 
     // Carrega o Footer

@@ -96,7 +96,15 @@
 }
 
 /* --- RESPONSIVO CONTACTO --- */
+@media (max-width: 991px) {
+    .hero-contato .yellow-box h1 { font-size: 2.8rem; }
+}
+
 @media (max-width: 768px) {
+    .hero-contato { height: 30vh; }
+    .hero-contato .yellow-box { padding: 15px 25px; }
+    .hero-contato .yellow-box h1 { font-size: 2rem; }
+    .contato-container { padding: 40px 20px; }
     .contact-grid {
         grid-template-columns: 1fr; /* Muda para 1 coluna no telemóvel */
     }
@@ -108,5 +116,9 @@
     }
     .sac-card i {
         margin-bottom: 20px;
+        font-size: 3rem;
+    }
+    .sac-card h3 {
+        font-size: 1.8rem;
     }
 }

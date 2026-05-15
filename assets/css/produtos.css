@@ -179,12 +179,18 @@
 }
 
 /* --- RESPONSIVO PRODUTOS --- */
+@media (max-width: 991px) {
+    .yellow-box h1 { font-size: 3.5rem; }
+    .catalog-row::before { top: 10%; bottom: 10%; }
+}
+
 @media (max-width: 768px) {
+    .hero-produtos { height: 40vh; }
     .yellow-box { padding: 20px 30px; }
-    .yellow-box h1 { font-size: 2.5rem; }
-    .filters-section { flex-direction: column; align-items: flex-start; }
-    .filter-selects { width: 100%; }
-    .filter-selects select { flex: 1; }
+    .yellow-box h1 { font-size: 2.2rem; }
+    .filters-section { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .filter-selects { width: 100%; flex-direction: column; }
+    .filter-selects select { width: 100%; }
     /* Ajusta a espessura da faixa azul no celular para abraçar melhor os cards empilhados */
-    .catalog-row::before { top: 15%; bottom: 15%; }
+    .catalog-row::before { top: 5%; bottom: 5%; }
 }
