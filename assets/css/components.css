@@ -186,11 +186,16 @@
 
 .main-footer .logo {
     margin-bottom: 25px;
+    display: block;
 }
 
 .main-footer .logo img {
+    max-width: 100%;
     height: auto;
     width: 180px;
+    position: relative;
+    margin-bottom: 0;
+    filter: none;
 }
 
 .social-icons {
