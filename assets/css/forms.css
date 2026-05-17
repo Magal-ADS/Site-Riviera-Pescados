@@ -1,10 +1,9 @@
 /* --- ESTILOS GERAIS PARA PÁGINAS DE FORMULÁRIO --- */
 
 .form-page-container {
-    padding-top: 160px; /* Evita sobreposição do Header fixo */
-    padding-bottom: 80px;
-    max-width: 850px;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 140px 20px 80px 20px; /* Padding-top de 140px evita sobreposição do header fixo */
 }
 
 .form-header-box {
@@ -31,8 +30,7 @@
     background: #ffffff;
     padding: 40px;
     border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .form-grid {
@@ -64,27 +62,27 @@
 .form-group select, 
 .form-group textarea {
     width: 100%;
-    padding: 12px 15px;
+    padding: 14px 15px;
     border: 1px solid #d1d5db;
     border-radius: 6px;
+    background-color: #f9fafb;
+    outline: none;
     font-family: inherit;
     font-size: 1rem;
     color: #1f2937;
-    background-color: #f9fafb;
     transition: all 0.3s ease;
-    outline: none;
 }
 
 .form-group input:focus, 
 .form-group select:focus, 
 .form-group textarea:focus {
-    border-color: var(--azul-escuro);
-    background-color: #fff;
-    box-shadow: 0 0 0 3px rgba(30, 36, 69, 0.1);
+    border-color: var(--amarelo);
+    background-color: #ffffff;
 }
 
 /* Estilo para Radios inline */
 .radio-group-inline {
+    display: flex;
     flex-direction: row;
     align-items: center;
     gap: 25px;
@@ -106,24 +104,32 @@
     accent-color: var(--azul-escuro);
 }
 
-/* Botão Customizado */
+/* Botão de Submit */
 .form-submit-btn {
     width: 100%;
-    padding: 18px;
-    font-size: 1.1rem;
-    margin-top: 30px;
+    padding: 16px;
+    background-color: var(--azul-escuro);
+    color: var(--branco);
     border: none;
-    cursor: pointer;
+    border-radius: 6px;
+    font-weight: bold;
     text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 30px;
+    font-size: 1.1rem;
     letter-spacing: 1px;
 }
 
-/* Ajustes Mobile */
+.form-submit-btn:hover {
+    background-color: var(--amarelo);
+    color: var(--azul-escuro);
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
     .form-page-container {
         padding-top: 120px;
-        padding-left: 20px;
-        padding-right: 20px;
     }
     
     .form-grid {

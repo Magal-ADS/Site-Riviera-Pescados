@@ -1,5 +1,6 @@
 @import url('variables.css');
 @import url('components.css');
+@import url('forms.css');
 
 /* Se existirem imports específicos por página, adicione abaixo */
 @import url('home.css');
