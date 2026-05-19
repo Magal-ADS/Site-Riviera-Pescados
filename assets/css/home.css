@@ -2,6 +2,22 @@
 .hero-container { position: relative; width: 100%; overflow: hidden; }
 .hero { display: block; height: 65vh; background-size: cover; background-position: center; border-bottom: 6px solid var(--amarelo); }
 
+/* Banner Images Desktop */
+.hero-1 { background-image: url('../images/banner-carrosel-2.webp'); }
+.hero-2 { background-image: url('../images/banner-carrosel-3.webp'); }
+.hero-3 { background-image: url('../images/banner-carrosel-4.webp'); }
+
+/* Banner Images Mobile */
+@media (max-width: 768px) {
+    .hero {
+        background-position: top center !important; /* Ancora a imagem no topo para não cortar o texto */
+        height: 75vh; /* Aumenta um pouco a área visível para acomodar melhor a imagem vertical */
+    }
+    .hero-1 { background-image: url('../images/mobile-banner1.webp'); }
+    .hero-2 { background-image: url('../images/mobile-banner2.webp'); }
+    .hero-3 { background-image: url('../images/mobile-banner3.webp'); }
+}
+
 /* Ajustes Swiper Hero */
 .hero-swiper .swiper-pagination-bullet { background: var(--branco); opacity: 0.7; }
 .hero-swiper .swiper-pagination-bullet-active { background: var(--amarelo); opacity: 1; }
@@ -86,12 +102,19 @@
 }
 
 @media (max-width: 768px) {
-    .hero {
-        height: 40vh;
-    }
-
     .recipes-carousel-section {
         padding: 50px 20px;
+    }
+
+    .recipes-carousel-section .swiper-button-next,
+    .recipes-carousel-section .swiper-button-prev {
+        width: 35px !important;
+        height: 35px !important;
+    }
+    
+    .recipes-carousel-section .swiper-button-next::after,
+    .recipes-carousel-section .swiper-button-prev::after {
+        font-size: 16px !important;
     }
 
     .recipe-content h2 {
