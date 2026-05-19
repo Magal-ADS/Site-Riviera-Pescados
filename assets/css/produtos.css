@@ -116,68 +116,6 @@
     z-index: 2; /* Fica acima da faixa azul */
 }
 
-/* Garante que os cards permaneçam com fundo branco */
-.catalog-row .product-card {
-    background: var(--branco);
-}
-
-/* --- PAGINAÇÃO --- */
-.pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-top: 60px;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-    position: relative; /* Coloca a paginação à frente do fundo */
-    z-index: 2;
-}
-
-.pagination a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-}
-
-.page-num {
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-    background-color: var(--branco); /* Fundo branco para não sumir no peixe */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.page-num:hover, .page-num.active {
-    background-color: var(--azul-escuro);
-    color: var(--branco);
-}
-
-.page-arrow {
-    background-color: var(--branco);
-    padding: 8px 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.page-arrow:hover {
-    color: var(--azul-escuro);
-    background-color: #f0f0f0;
-}
-
-.page-dots {
-    color: #333;
-    font-weight: bold;
-    background-color: var(--branco);
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
 /* --- RESPONSIVO PRODUTOS --- */
 @media (max-width: 991px) {
     .yellow-box h1 { font-size: 3.5rem; }
