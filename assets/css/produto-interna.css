@@ -112,15 +112,22 @@
 
 .product-icons {
     display: flex;
-    align-items: center; /* Garante alinhamento vertical dos ícones e textos */
-    gap: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
     margin-bottom: 30px;
+    flex-wrap: wrap; /* Permite que os blocos inteiros quebrem se necessário */
+}
+
+.recipe-info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .product-icons span {
     font-weight: 700;
     color: var(--azul-escuro);
-    margin-right: 15px;
 }
 
 .icon-circle {
@@ -133,7 +140,7 @@
     justify-content: center;
     color: var(--branco);
     font-size: 1.8rem;
-    flex-shrink: 0; /* Impede que o círculo achate */
+    flex-shrink: 0;
 }
 
 /* --- CAIXA DICA RIVIERA --- */
@@ -241,6 +248,13 @@
         flex-wrap: wrap !important;
         gap: 15px !important;
         margin-bottom: 25px !important;
+    }
+
+    .recipe-info-item {
+        display: flex !important;
+        align-items: center !important;
+        white-space: nowrap !important;
+        gap: 8px;
     }
 
     .icon-circle {
