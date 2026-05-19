@@ -112,8 +112,15 @@
 
 .product-icons {
     display: flex;
+    align-items: center; /* Garante alinhamento vertical dos ícones e textos */
     gap: 15px;
     margin-bottom: 30px;
+}
+
+.product-icons span {
+    font-weight: 700;
+    color: var(--azul-escuro);
+    margin-right: 15px;
 }
 
 .icon-circle {
@@ -126,6 +133,29 @@
     justify-content: center;
     color: var(--branco);
     font-size: 1.8rem;
+    flex-shrink: 0; /* Impede que o círculo achate */
+}
+
+/* --- CAIXA DICA RIVIERA --- */
+.recipe-tip-box {
+    background-color: var(--amarelo);
+    padding: 20px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+.recipe-tip-box h4 {
+    color: var(--azul-escuro);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.recipe-tip-box p {
+    color: var(--texto-dark);
+    font-size: 0.95rem;
+    line-height: 1.4;
 }
 
 .product-description {
@@ -172,12 +202,67 @@
         background: var(--azul-claro);
         padding-top: 20px;
     }
-    .product-main-info { flex-direction: column; gap: 30px; }
-    .product-image-box { padding: 20px; }
-    .product-text-info { text-align: center; padding-top: 0; }
-    .product-text-info h1 { font-size: 2.2rem; }
-    .product-weight { font-size: 1.4rem; }
-    .product-icons { justify-content: center; }
+
+    /* 1. Respiro Lateral */
+    .product-details-container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        padding-bottom: 40px;
+    }
+
+    .product-main-info { 
+        flex-direction: column; 
+        gap: 30px; 
+    }
+
+    .product-image-box { 
+        padding: 20px; 
+    }
+
+    .product-text-info { 
+        text-align: center; 
+        padding-top: 0; 
+    }
+
+    /* 2. Título da Receita */
+    .product-text-info h1 { 
+        font-size: 1.8rem !important; 
+        line-height: 1.2 !important;
+        margin-bottom: 15px !important;
+    }
+
+    .product-weight { 
+        font-size: 1.4rem; 
+    }
+
+    /* 3. Barra de Informações (Ícones) */
+    .product-icons { 
+        justify-content: center; 
+        flex-wrap: wrap !important;
+        gap: 15px !important;
+        margin-bottom: 25px !important;
+    }
+
+    .icon-circle {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.2rem !important;
+    }
+
+    .product-icons span {
+        font-size: 0.9rem !important;
+        margin-right: 0 !important;
+    }
+
+    /* 4. Caixa Dica Riviera */
+    .recipe-tip-box {
+        border-radius: 10px !important;
+        margin-top: 20px !important;
+        margin-bottom: 20px !important;
+        padding: 20px !important;
+        text-align: left; /* Melhora a leitura da dica */
+    }
+
     .btn-download-pdf { width: 100%; justify-content: center; }
 }
 

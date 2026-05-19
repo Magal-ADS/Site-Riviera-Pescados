@@ -4,6 +4,7 @@ const recipesData = {
         time: '20 min',
         portions: '2 porções',
         difficulty: 'Fácil',
+        image: 'assets/images/riviera.webp',
         tip: 'Sirva com arroz branco e legumes salteados para uma refeição leve e equilibrada.',
         ingredients: [
             '2 filés de tilápia Riviera',
@@ -27,6 +28,7 @@ const recipesData = {
         time: '30 min',
         portions: '2 porções',
         difficulty: 'Fácil',
+        image: 'assets/images/TILÁPIA-AO-MOLHO-DE-MARACUJÁ.webp',
         tip: 'O azedinho do maracujá combina perfeitamente com a suavidade da tilápia.',
         ingredients: [
             '2 filés de tilápia Riviera',
@@ -47,6 +49,7 @@ const recipesData = {
         time: '40 min',
         portions: '3 porções',
         difficulty: 'Média',
+        image: 'assets/images/riviera.webp',
         tip: 'Use um bom queijo muçarela para uma gratinação perfeita.',
         ingredients: [
             '3 filés de tilápia Riviera',
@@ -67,6 +70,7 @@ const recipesData = {
         time: '25 min',
         portions: '4 tacos',
         difficulty: 'Fácil',
+        image: 'assets/images/riviera.webp',
         tip: 'Adicione coentro e limão fresco para um toque mexicano autêntico.',
         ingredients: [
             '2 filés de tilápia Riviera em tiras',
@@ -87,6 +91,7 @@ const recipesData = {
         time: '25 min',
         portions: '2 porções',
         difficulty: 'Fácil',
+        image: 'assets/images/riviera.webp',
         tip: 'O molho tártaro caseiro faz toda a diferença.',
         ingredients: [
             '2 filés de tilápia Riviera',
@@ -106,6 +111,7 @@ const recipesData = {
         time: '35 min',
         portions: '3 porções',
         difficulty: 'Fácil',
+        image: 'assets/images/TILÁPIA-AO-LEITE-DE-COCO-_ESTILO-MOQUECA-LEVE_.webp',
         tip: 'Um prato clássico que lembra uma moqueca rápida.',
         ingredients: [
             '3 filés de tilápia Riviera',
@@ -126,6 +132,7 @@ const recipesData = {
         time: '40 min',
         portions: '3 porções',
         difficulty: 'Fácil',
+        image: 'assets/images/TILÁPIA-AO-FORNO-COM-BATATAS.webp',
         tip: 'Corte as batatas em fatias finas para cozinharem junto com o peixe.',
         ingredients: [
             '3 filés de tilápia Riviera',
@@ -146,6 +153,7 @@ const recipesData = {
         time: '25 min',
         portions: '2 porções',
         difficulty: 'Fácil',
+        image: 'assets/images/riviera.webp',
         tip: 'Equilibre o mel com a mostarda de acordo com seu gosto.',
         ingredients: [
             '2 filés de tilápia Riviera',
@@ -165,6 +173,7 @@ const recipesData = {
         time: '20 min',
         portions: '2 porções',
         difficulty: 'Fácil',
+        image: 'assets/images/TILÁPIA-AO-ALHO-E-AZEITE.webp',
         tip: 'O segredo é não deixar o alho queimar para não amargar.',
         ingredients: [
             '2 filés de tilápia Riviera',
@@ -184,6 +193,7 @@ const recipesData = {
         time: '30 min',
         portions: '3 porções',
         difficulty: 'Fácil',
+        image: 'assets/images/riviera.webp',
         tip: 'Uma refeição completa e muito rápida.',
         ingredients: [
             '3 filés de tilápia Riviera em cubos',
@@ -203,6 +213,7 @@ const recipesData = {
         time: '25 min',
         portions: '2 porções',
         difficulty: 'Fácil',
+        image: 'assets/images/BURGER-DE-TILÁPIA-EMPANADA.webp',
         tip: 'Use pão de brioche para um sanduíche mais gourmet.',
         ingredients: [
             '2 filés de tilápia empanados Riviera',
@@ -222,6 +233,7 @@ const recipesData = {
         time: '35 min',
         portions: '3 porções',
         difficulty: 'Fácil',
+        image: 'assets/images/Tilápia-Empanada.webp',
         tip: 'O purê bem cremoso contrasta com a crocância do peixe.',
         ingredients: [
             '3 filés de tilápia empanados Riviera',
@@ -240,6 +252,7 @@ const recipesData = {
         time: '30 min',
         portions: '3 porções',
         difficulty: 'Fácil',
+        image: 'assets/images/riviera.webp',
         tip: 'Adicione parmesão e creme de leite ao arroz para cremosidade extra.',
         ingredients: [
             '3 filés de tilápia empanados Riviera',
@@ -258,6 +271,7 @@ const recipesData = {
         time: '25 min',
         portions: '2 porções',
         difficulty: 'Fácil',
+        image: 'assets/images/riviera.webp',
         tip: 'Inspirado na culinária oriental.',
         ingredients: [
             '2 filés de tilápia empanados Riviera',
@@ -275,6 +289,7 @@ const recipesData = {
         time: '20 min',
         portions: '2 porções',
         difficulty: 'Fácil',
+        image: 'assets/images/TILÁPIA EMPANADA COM SALADA TROPICAL.webp',
         tip: 'Use manga ou abacaxi na salada para refrescar.',
         ingredients: [
             '2 filés de tilápia empanados Riviera',
@@ -303,6 +318,11 @@ function loadRecipe() {
         // Atualiza Breadcrumb e Títulos
         document.getElementById('recipe-breadcrumb').textContent = recipe.name;
         document.getElementById('recipe-title').textContent = recipe.name;
+
+        // Atualiza Imagem
+        if (recipe.image) {
+            document.getElementById('recipe-image').src = recipe.image;
+        }
 
         // Atualiza Infos
         document.getElementById('recipe-time').textContent = recipe.time;
