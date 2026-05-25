@@ -28,7 +28,7 @@ const recipesData = {
         time: '30 min',
         portions: '2 porções',
         difficulty: 'Fácil',
-        image: 'assets/images/TILÁPIA-AO-MOLHO-DE-MARACUJÁ.webp',
+        image: 'assets/images/TILÁPIA-AO-MOLHO-DE-MARACUJÁ (1).webp',
         tip: 'O azedinho do maracujá combina perfeitamente com a suavidade da tilápia.',
         ingredients: [
             '2 filés de tilápia Riviera',
@@ -173,7 +173,7 @@ const recipesData = {
         time: '20 min',
         portions: '2 porções',
         difficulty: 'Fácil',
-        image: 'assets/images/TILÁPIA-AO-ALHO-E-AZEITE.webp',
+        image: 'assets/images/TILÁPIA-AO-ALHO-E-AZEITE (1).webp',
         tip: 'O segredo é não deixar o alho queimar para não amargar.',
         ingredients: [
             '2 filés de tilápia Riviera',
@@ -213,7 +213,7 @@ const recipesData = {
         time: '25 min',
         portions: '2 porções',
         difficulty: 'Fácil',
-        image: 'assets/images/BURGER-DE-TILÁPIA-EMPANADA.webp',
+        image: 'assets/images/BURGUER-DE-TILÁPIA-EMPANADA (1).webp',
         tip: 'Use pão de brioche para um sanduíche mais gourmet.',
         ingredients: [
             '2 filés de tilápia empanados Riviera',
