@@ -24,87 +24,23 @@
     <section class="filters-section container">
         <span class="filter-label">Filtros:</span>
         <div class="filter-selects">
-            <select><option>Categoria</option></select>
-            <select><option>Tamanho</option></select>
-            <select><option>Tipo</option></select>
+            <select id="product-filter-category" aria-label="Filtrar por categoria">
+                <option value="">Categoria</option>
+            </select>
+            <select id="product-filter-size" aria-label="Filtrar por tamanho">
+                <option value="">Tamanho</option>
+            </select>
+            <select id="product-filter-type" aria-label="Filtrar por tipo">
+                <option value="">Tipo</option>
+            </select>
         </div>
     </section>
 
-    <section class="catalog-section">
-        <div class="catalog-row">
-            <div class="container products-grid">
-                <a href="produto-interna.html?id=file-400g" class="product-card">
-                    <picture>
-                        <source srcset="assets/images/produtos/file-tilapia-400g.webp" type="image/webp">
-                        <img src="assets/images/produtos/file-tilapia-400g.webp" alt="Fil&eacute; de Til&aacute;pia 400g" loading="lazy">
-                    </picture>
-                    <h4>Fil&eacute; de Til&aacute;pia<br><strong>400g</strong></h4>
-                </a>
-                <a href="produto-interna.html?id=file-800g" class="product-card">
-                    <picture>
-                        <source srcset="assets/images/produtos/file-tilapia-800g.webp" type="image/webp">
-                        <img src="assets/images/produtos/file-tilapia-800g.webp" alt="Fil&eacute; de Til&aacute;pia 800g" loading="lazy">
-                    </picture>
-                    <h4>Fil&eacute; de Til&aacute;pia<br><strong>800g</strong></h4>
-                </a>
-                <a href="produto-interna.html?id=file-2kg" class="product-card">
-                    <picture>
-                        <source srcset="assets/images/produtos/file-tilapia-2kg.webp" type="image/webp">
-                        <img src="assets/images/produtos/file-tilapia-2kg.webp" alt="Fil&eacute; de Til&aacute;pia 2kg" loading="lazy">
-                    </picture>
-                    <h4>Fil&eacute; de Til&aacute;pia<br><strong>2kg</strong></h4>
-                </a>
-            </div>
-        </div>
-
-        <div class="catalog-row">
-            <div class="container products-grid">
-                <a href="produto-interna.html?id=isca-400g" class="product-card">
-                    <picture>
-                        <source srcset="assets/images/produtos/isca-tilapia-400g.webp" type="image/webp">
-                        <img src="assets/images/produtos/isca-tilapia-400g.webp" alt="Isca de Til&aacute;pia 400g" loading="lazy">
-                    </picture>
-                    <h4>Isca de Til&aacute;pia<br><strong>400g</strong></h4>
-                </a>
-                <a href="produto-interna.html?id=tirinhas-250g" class="product-card">
-                    <picture>
-                        <source srcset="assets/images/produtos/tirinhas-tilapia-250g.webp" type="image/webp">
-                        <img src="assets/images/produtos/tirinhas-tilapia-250g.webp" alt="Tirinhas de Til&aacute;pia 250g" loading="lazy">
-                    </picture>
-                    <h4>Tirinhas de Til&aacute;pia<br><strong>250g</strong></h4>
-                </a>
-                <a href="produto-interna.html?id=file-tilapia-empanado-400g" class="product-card">
-                    <picture>
-                        <source srcset="assets/images/produtos/file-tilapia-empanado-400g.webp" type="image/webp">
-                        <img src="assets/images/produtos/file-tilapia-empanado-400g.webp" alt="Fil&eacute; de Til&aacute;pia Empanado 400g" loading="lazy">
-                    </picture>
-                    <h4>Fil&eacute; de Til&aacute;pia Empanado<br><strong>400g</strong></h4>
-                </a>
-            </div>
-        </div>
-
-        <div class="catalog-row">
-            <div class="container products-grid">
-                <a href="produto-interna.html?id=granel-10kg" class="product-card">
-                    <picture>
-                        <source srcset="assets/images/produtos/file-tilapia-granel-10kg.webp" type="image/webp">
-                        <img src="assets/images/produtos/file-tilapia-granel-10kg.webp" alt="Fil&eacute; de Til&aacute;pia Granel 10kg" loading="lazy">
-                    </picture>
-                    <h4>Fil&eacute; de Til&aacute;pia Granel<br><strong>Pacote 10 kg</strong></h4>
-                </a>
-                <a href="produto-interna.html?id=panga-granel-10kg" class="product-card">
-                    <picture>
-                        <source srcset="assets/images/produtos/file-panga-granel-10kg.webp" type="image/webp">
-                        <img src="assets/images/produtos/file-panga-granel-10kg.webp" alt="Fil&eacute; de Panga Granel 10kg" loading="lazy">
-                    </picture>
-                    <h4>Fil&eacute; de Panga Granel<br><strong>10kg</strong></h4>
-                </a>
-            </div>
-        </div>
-    </section>
+    <section class="catalog-section" data-products-catalog></section>
 
     <div id="footer-placeholder"></div>
 
+    <script src="assets/js/products.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

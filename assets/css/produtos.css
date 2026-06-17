@@ -116,6 +116,22 @@
     z-index: 2; /* Fica acima da faixa azul */
 }
 
+.products-empty-state {
+    padding: 40px 20px 80px;
+}
+
+.products-empty-state p {
+    margin: 0;
+    padding: 24px 28px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+    color: var(--azul-escuro);
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
 /* --- RESPONSIVO PRODUTOS --- */
 @media (max-width: 991px) {
     .yellow-box h1 { font-size: 3.5rem; }
