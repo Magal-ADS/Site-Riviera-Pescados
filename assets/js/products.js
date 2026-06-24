@@ -12,7 +12,8 @@ const productsData = {
         datasheet: 'assets/docs/ficha-tecnica-file-400g.pdf',
         description: 'Tilapia em file sem pele, pratica para refeicoes rapidas e porcoes individuais.',
         ingredients: 'File de tilapia sem pele e sem espinha. Nao contem gluten.',
-        nutrition: 'Porcao de 100g: valor energetico 90 kcal, proteinas 20 g, gorduras totais 1 g.'
+        nutrition: 'Porcao de 100g: valor energetico 90 kcal, proteinas 20 g, gorduras totais 1 g.',
+        relatedRecipes: ['receita-1', 'receita-2', 'receita-3']
     },
     'file-800g': {
         name: 'File de Tilapia',
@@ -25,7 +26,8 @@ const productsData = {
         datasheet: 'assets/docs/ficha-tecnica-800g.pdf',
         description: 'Tilapia em file em embalagem familia, com praticidade para o dia a dia.',
         ingredients: 'File de tilapia sem pele e sem espinha. Nao contem gluten.',
-        nutrition: 'Porcao de 100g: valor energetico 90 kcal, proteinas 20 g, gorduras totais 1 g.'
+        nutrition: 'Porcao de 100g: valor energetico 90 kcal, proteinas 20 g, gorduras totais 1 g.',
+        relatedRecipes: ['receita-6', 'receita-7', 'receita-8']
     },
     'file-2kg': {
         name: 'File de Tilapia',
@@ -38,7 +40,8 @@ const productsData = {
         datasheet: 'assets/docs/ficha-tecnica-2kg.pdf',
         description: 'Opcao economica para maior volume, mantendo o padrao de qualidade Riviera.',
         ingredients: 'File de tilapia sem pele e sem espinha. Nao contem gluten.',
-        nutrition: 'Porcao de 100g: valor energetico 90 kcal, proteinas 20 g, gorduras totais 1 g.'
+        nutrition: 'Porcao de 100g: valor energetico 90 kcal, proteinas 20 g, gorduras totais 1 g.',
+        relatedRecipes: ['receita-3', 'receita-9', 'receita-10']
     },
     'isca-400g': {
         name: 'Isca de Tilapia',
@@ -51,7 +54,8 @@ const productsData = {
         datasheet: 'assets/docs/ficha-tecnica-isca-400g.pdf',
         description: 'Iscas de tilapia selecionadas, praticas para preparo rapido e versatil.',
         ingredients: 'Iscas de tilapia. Nao contem gluten.',
-        nutrition: 'Porcao de 100g: valor energetico 110 kcal, proteinas 18 g, gorduras totais 3 g.'
+        nutrition: 'Porcao de 100g: valor energetico 110 kcal, proteinas 18 g, gorduras totais 3 g.',
+        relatedRecipes: ['receita-4', 'receita-9', 'receita-10']
     },
     'tirinhas-250g': {
         name: 'Tirinhas de Tilapia',
@@ -64,7 +68,8 @@ const productsData = {
         datasheet: null,
         description: 'Tirinhas de tilapia super crocantes, prontas para preparo pratico no dia a dia.',
         ingredients: 'Empanado a base de tilapia, pre-frito e congelado.',
-        nutrition: 'Consulte a embalagem do produto para as informacoes nutricionais completas.'
+        nutrition: 'Consulte a embalagem do produto para as informacoes nutricionais completas.',
+        relatedRecipes: ['receita-11', 'receita-14', 'receita-15']
     },
     'file-tilapia-empanado-400g': {
         name: 'File de Tilapia Empanado',
@@ -77,7 +82,8 @@ const productsData = {
         datasheet: null,
         description: 'File de tilapia empanado, super saboroso e pronto para preparo rapido.',
         ingredients: 'File de tilapia sem pele, temperado, empanado, pre-frito e congelado.',
-        nutrition: 'Consulte a embalagem do produto para as informacoes nutricionais completas.'
+        nutrition: 'Consulte a embalagem do produto para as informacoes nutricionais completas.',
+        relatedRecipes: ['receita-5', 'receita-12', 'receita-13']
     },
     'granel-10kg': {
         name: 'File de Tilapia Granel',
@@ -90,7 +96,8 @@ const productsData = {
         datasheet: 'assets/docs/ficha-tecnica-10kg.pdf',
         description: 'Opcao em granel para operacoes de maior volume, com padrao Riviera.',
         ingredients: 'File de tilapia granel sem pele e sem espinha.',
-        nutrition: 'Porcao de 100g: valor energetico 90 kcal, proteinas 20 g, gorduras totais 1 g.'
+        nutrition: 'Porcao de 100g: valor energetico 90 kcal, proteinas 20 g, gorduras totais 1 g.',
+        relatedRecipes: ['receita-1', 'receita-6', 'receita-10']
     },
     'panga-granel-10kg': {
         name: 'File de Panga Granel',
@@ -103,7 +110,8 @@ const productsData = {
         datasheet: null,
         description: 'File de panga em embalagem granel, indicado para demandas de maior volume.',
         ingredients: 'File de panga congelado.',
-        nutrition: 'Consulte a embalagem do produto para as informacoes nutricionais completas.'
+        nutrition: 'Consulte a embalagem do produto para as informacoes nutricionais completas.',
+        relatedRecipes: ['receita-2', 'receita-6', 'receita-8']
     }
 };
 
@@ -180,6 +188,57 @@ function filterProducts(products, filters) {
     });
 }
 
+function getRelatedRecipes(product) {
+    if (typeof recipesData === 'undefined' || !Array.isArray(product.relatedRecipes)) {
+        return [];
+    }
+
+    return product.relatedRecipes
+        .map((recipeId) => {
+            const recipe = recipesData[recipeId];
+
+            if (!recipe) return null;
+
+            return {
+                id: recipeId,
+                ...recipe
+            };
+        })
+        .filter(Boolean);
+}
+
+function renderRelatedRecipes(product) {
+    const recipesContainer = document.querySelector('[data-related-recipes]');
+    const recipesSection = document.querySelector('.related-recipes-section');
+
+    if (!recipesContainer) return;
+
+    const relatedRecipes = getRelatedRecipes(product);
+
+    if (!relatedRecipes.length) {
+        recipesContainer.innerHTML = '';
+
+        if (recipesSection) {
+            recipesSection.style.display = 'none';
+        }
+
+        return;
+    }
+
+    if (recipesSection) {
+        recipesSection.style.display = '';
+    }
+
+    recipesContainer.innerHTML = relatedRecipes
+        .map((recipe) => `
+            <a href="receita-interna.html?id=${recipe.id}" class="recipe-card-item" style="text-decoration: none; color: inherit;">
+                <img src="${recipe.image}" alt="${recipe.name}" loading="lazy">
+                <h4>${recipe.name}</h4>
+            </a>
+        `)
+        .join('');
+}
+
 function initProductsCatalog() {
     const catalogSection = document.querySelector('[data-products-catalog]');
     if (!catalogSection) return;
@@ -251,6 +310,8 @@ function loadProduct() {
             accordions[0].textContent = product.ingredients;
             accordions[1].textContent = product.nutrition;
         }
+
+        renderRelatedRecipes(product);
     }
 }
 
