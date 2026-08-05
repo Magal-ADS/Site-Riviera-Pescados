@@ -86,16 +86,6 @@ const blogData = {
             <p>O cheiro deve ser suave, lembrando o mar ou água doce, nunca um odor forte ou desagradável. Se estiver congelado, certifique-se de que não há excesso de gelo dentro da embalagem, o que pode indicar descongelamento prévio.</p>
         `
     },
-    'artigo-7': {
-        title: 'Tilápia empanada: crocante por fora, suculenta por dentro',
-        keyword: 'tilápia empanada',
-        image: 'assets/images/Tilápia-Empanada.webp',
-        content: `
-            <h3>O segredo da crocância</h3>
-            <p>Para uma tilápia empanada perfeita, experimente usar farinha Panko em vez da farinha de rosca tradicional. O resultado é uma casquinha muito mais aerada e crocante.</p>
-            <p>Você também pode assar os filés empanados em forno alto ou na Airfryer para uma versão mais saudável e com menos gordura.</p>
-        `
-    },
     'artigo-8': {
         title: 'Alimentação saudável: o papel do peixe na sua rotina',
         keyword: 'alimentação saudável peixe',

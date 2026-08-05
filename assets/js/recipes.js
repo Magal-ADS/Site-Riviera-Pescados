@@ -86,26 +86,6 @@ const recipesData = {
             'Sirva com fatias de limão.'
         ]
     },
-    'receita-5': {
-        name: 'Tilápia Empanada com Molho Tártaro',
-        time: '25 min',
-        portions: '2 porções',
-        difficulty: 'Fácil',
-        image: 'assets/images/TILÁPIA-EMPANADA-COM-MOLHO-TÁRTARO.webp',
-        tip: 'O molho tártaro caseiro faz toda a diferença.',
-        ingredients: [
-            '2 filés de tilápia Riviera',
-            'Farinha panko para empanar',
-            'Maionese, picles e cebolinha (para o molho)',
-            'Óleo para fritar'
-        ],
-        steps: [
-            'Empane os filés na farinha panko.',
-            'Frite até ficarem bem crocantes.',
-            'Misture os ingredientes do molho.',
-            'Sirva quente.'
-        ]
-    },
     'receita-6': {
         name: 'Tilápia ao Leite de Coco',
         time: '35 min',
@@ -206,101 +186,6 @@ const recipesData = {
             'Grelhe os cubos de tilápia temperados.',
             'Misture a massa com azeite, alho frito e o peixe.',
             'Sirva com parmesão.'
-        ]
-    },
-    'receita-11': {
-        name: 'Burger de Tilápia Empanada',
-        time: '25 min',
-        portions: '2 porções',
-        difficulty: 'Fácil',
-        image: 'assets/images/BURGUER-DE-TILÁPIA-EMPANADA (1).webp',
-        tip: 'Use pão de brioche para um sanduíche mais gourmet.',
-        ingredients: [
-            '2 filés de tilápia empanados Riviera',
-            'Pães de hambúrguer',
-            'Alface e tomate',
-            'Molho de iogurte ou tártaro'
-        ],
-        steps: [
-            'Frite ou asse os filés empanados.',
-            'Sele o pão na chapa.',
-            'Monte o burger com o peixe, vegetais e molho.',
-            'Aproveite!'
-        ]
-    },
-    'receita-12': {
-        name: 'Tilápia Empanada com Purê de Batata',
-        time: '35 min',
-        portions: '3 porções',
-        difficulty: 'Fácil',
-        image: 'assets/images/TILÁPIA-EMPANADA-COM-PURÊ-DE-BATATA.webp',
-        tip: 'O purê bem cremoso contrasta com a crocância do peixe.',
-        ingredients: [
-            '3 filés de tilápia empanados Riviera',
-            '4 batatas cozidas e espremidas',
-            'Leite e manteiga para o purê',
-            'Noz-moscada'
-        ],
-        steps: [
-            'Prepare o purê de batatas tradicional.',
-            'Prepare os filés empanados (fritos ou airfryer).',
-            'Sirva o peixe sobre o berço de purê.'
-        ]
-    },
-    'receita-13': {
-        name: 'Tilápia Empanada com Arroz Cremoso',
-        time: '30 min',
-        portions: '3 porções',
-        difficulty: 'Fácil',
-        image: 'assets/images/TILÁPIA-EMPANADA-COM-ARROZ-CREMOSO.webp',
-        tip: 'Adicione parmesão e creme de leite ao arroz para cremosidade extra.',
-        ingredients: [
-            '3 filés de tilápia empanados Riviera',
-            '2 xícaras de arroz cozido',
-            'Creme de leite e queijo ralado',
-            'Milho e ervilha (opcional)'
-        ],
-        steps: [
-            'Misture o arroz com os cremes e queijo no fogo.',
-            'Prepare os filés empanados.',
-            'Sirva junto com o arroz bem quente.'
-        ]
-    },
-    'receita-14': {
-        name: 'Tilápia Empanada com Molho Agridoce',
-        time: '25 min',
-        portions: '2 porções',
-        difficulty: 'Fácil',
-        image: 'assets/images/TILÁPIA-EMPANADA-COM-MOLHO-AGRIDOCE.webp',
-        tip: 'Inspirado na culinária oriental.',
-        ingredients: [
-            '2 filés de tilápia empanados Riviera',
-            'Ketchup, vinagre e açúcar (para o molho)',
-            'Pimentão e abacaxi em cubos'
-        ],
-        steps: [
-            'Prepare o peixe empanado.',
-            'Leve os ingredientes do molho ao fogo até engrossar.',
-            'Cubra o peixe com o molho e os cubos de fruta.'
-        ]
-    },
-    'receita-15': {
-        name: 'Tilápia Empanada com Salada Tropical',
-        time: '20 min',
-        portions: '2 porções',
-        difficulty: 'Fácil',
-        image: 'assets/images/TILÁPIA-EMPANADA-COM-SALADA-TROPICAL.webp',
-        tip: 'Use manga ou abacaxi na salada para refrescar.',
-        ingredients: [
-            '2 filés de tilápia empanados Riviera',
-            'Mix de folhas verdes',
-            'Cubos de manga e tomate cereja',
-            'Molho de limão e azeite'
-        ],
-        steps: [
-            'Prepare a tilápia empanada.',
-            'Monte a salada com as frutas e folhas.',
-            'Tempere a salada e sirva com o peixe crocante.'
         ]
     }
 };

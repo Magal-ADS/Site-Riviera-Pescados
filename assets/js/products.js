@@ -69,21 +69,7 @@ const productsData = {
         description: 'Tirinhas de tilápia super crocantes, prontas para preparo prático no dia a dia.',
         ingredients: 'Empanado a base de tilápia, pré-frito e congelado.',
         nutrition: 'Consulte a embalagem do produto para as informações nutricionais completas.',
-        relatedRecipes: ['receita-11', 'receita-14', 'receita-15']
-    },
-    'file-tilapia-empanado-400g': {
-        name: 'Filé de Tilápia Empanado',
-        heading: 'Filé de Tilápia<br>Empanado',
-        weight: '400g',
-        size: '400g',
-        category: 'Filé',
-        type: 'Empanado',
-        image: `assets/images/produtos/file-tilapia-empanado-400g.webp?v=${ASSET_VERSION}`,
-        datasheet: null,
-        description: 'Filé de tilápia empanado, super saboroso e pronto para preparo rápido.',
-        ingredients: 'Filé de tilápia sem pele, temperado, empanado, pré-frito e congelado.',
-        nutrition: 'Consulte a embalagem do produto para as informações nutricionais completas.',
-        relatedRecipes: ['receita-5', 'receita-12', 'receita-13']
+        relatedRecipes: []
     },
     'granel-10kg': {
         name: 'Filé de Tilápia Granel',
