@@ -106,8 +106,10 @@ function getProductsList() {
 }
 
 function buildProductCard(product) {
+    const bulkClass = product.type === 'Granel' ? ' product-card--bulk' : '';
+
     return `
-        <a href="produto-interna.html?id=${product.id}" class="product-card">
+        <a href="produto-interna.html?id=${product.id}" class="product-card${bulkClass}">
             <picture>
                 <source srcset="${product.image}" type="image/webp">
                 <img src="${product.image}" alt="${product.name} ${product.weight}" loading="lazy">

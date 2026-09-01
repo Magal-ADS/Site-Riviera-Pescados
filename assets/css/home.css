@@ -68,6 +68,8 @@
 .product-card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
 .product-card img { width: 100%; margin-bottom: 20px; transition: transform 0.4s ease; }
 .product-card:hover img { transform: scale(1.08) rotate(2deg); }
+.product-card--bulk img { transform: scale(1.45); }
+.product-card--bulk:hover img { transform: scale(1.55) rotate(2deg); }
 .product-card h4 { color: var(--azul-escuro); font-size: 1.2rem; }
 
 /* --- REDES SOCIAIS --- */
