@@ -1,4 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Players minimalistas para os vídeos da seção de redes sociais.
+    document.querySelectorAll('.social-item').forEach((item) => {
+        const video = item.querySelector('video');
+        const playButton = item.querySelector('.social-video-play');
+
+        if (!video || !playButton) return;
+
+        const playVideo = () => {
+            video.play().catch(() => item.classList.remove('is-playing'));
+        };
+
+        playButton.addEventListener('click', playVideo);
+        video.addEventListener('click', () => video.paused ? playVideo() : video.pause());
+        video.addEventListener('play', () => item.classList.add('is-playing'));
+        video.addEventListener('pause', () => item.classList.remove('is-playing'));
+        video.addEventListener('ended', () => item.classList.remove('is-playing'));
+    });
     // Carrega o Header
     fetch('components/header.html')
         .then(response => response.text())
