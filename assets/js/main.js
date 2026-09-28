@@ -171,6 +171,16 @@ document.addEventListener("DOMContentLoaded", () => {
             const formData = new FormData(formRiviera);
             const data = Object.fromEntries(formData.entries());
 
+            if (data.logradouro) {
+                data.endereco = [
+                    [data.logradouro, data.numero].filter(Boolean).join(', '),
+                    data.complemento,
+                    data.bairro,
+                    [data.cidade, data.estado].filter(Boolean).join(' - '),
+                    data.cep ? `CEP ${data.cep}` : ''
+                ].filter(Boolean).join(', ');
+            }
+
             fetch('https://webhook.weagles.com.br/webhook/f44e290e-369d-4da5-b481-09f6ab2e6768', {
                 method: 'POST',
                 headers: {
